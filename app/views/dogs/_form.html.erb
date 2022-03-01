@@ -1,0 +1,17 @@
+<div class="form">
+  <div id="form-container" class="container">
+    <%= simple_form_for(dog) do |f| %>
+      <div id="info">
+        <%= f.input :name %>
+        <%= f.input :breed %>
+        <%= f.input :gender %>
+        <%= f.input :size %>
+        <%= f.input :traits %>
+        <%= f.input :description, as: :text %>
+        <%#= f.input :main_photo, as: :file %>
+        <%#= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit "Submit", class: "button" %>
+      </div>
+    <% end %>
+  </div>
+</div>
