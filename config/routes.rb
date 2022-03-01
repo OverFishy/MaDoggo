@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  resources :parks, only: %i[index]
+  resource :dashboard, only: [:show]
+  # Defines the root path route ("/")
+  # root "articles#index"
 end
