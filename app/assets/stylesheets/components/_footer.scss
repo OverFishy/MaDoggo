@@ -1,0 +1,32 @@
+.footer {
+  width: 100%;
+  background-color: white;
+  display: flex;
+
+  .footer-action {
+    border: 1px solid black;
+    width: 33%;
+    text-align: center;
+    border-radius: 14px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
