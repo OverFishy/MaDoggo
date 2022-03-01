@@ -1,0 +1,8 @@
+<h1>Dash-Board</h1>
+<h2><%= @user.email %></h2>
+<% @user_dogs.each do |dog| %>
+  <%= dog.name %>
+<% end %>
+<% @user_friendships.each do |friendship| %>
+  <%= friendship.name_of_friends %>
+<% end %>
