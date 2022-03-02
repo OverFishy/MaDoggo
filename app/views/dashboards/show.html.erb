@@ -1,36 +1,24 @@
 <div class="container">
   <h1>Dash-Board</h1>
+  <h2><%= @user.email %></h2>
   <div class="usercard">
   </div>
 
   <%# Add a dog %>
 
   <div class="container dogs">
+    <h4>Your doggos:</h4>
     <% @user_dogs.each do |dog| %>
       <%= render "parks/dog", dog: dog %>
     <% end %>
   </div>
 
   <div class="container friends">
+    <h4>Your friends:</h4>
+    <div class="friends-grid">
+      <% @user_friendships.each do |friendship| %>
+        <%= render "friend", friendship: friendship %>
+      <% end %>
+    </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2><%= @user.email %></h2>
-<% @user_dogs.each do |dog| %>
- <p> <%= dog.name %></p>
-<% end %>
-<% @user_friendships.each do |friendship| %>
- <p> <%= name_of_friend(friendship) %></p>
-<% end %>

@@ -1,0 +1,16 @@
+.card-friend{
+  display:flex;
+  flex-direction: column;
+  width: 5rem;
+  align-items: center;
+}
+
+.card-friend img {
+  height: 100%;
+  width: 100px;
+  object-fit: cover;
+}
+
+.card-friend-infos p {
+  text-align: unset;
+}
