@@ -6,7 +6,8 @@ class ParksController < ApplicationController
     @markers = @parks.geocoded.map do |park|
       {
         lat: park.latitude,
-        lng: park.longitude
+        lng: park.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { park: park })
       }
     end
   end
