@@ -1,18 +1,11 @@
-<div class="footer">
-     <div class="footer-action">
-       <%= link_to root_path do %>
-         <%= image_tag('https://images.squarespace-cdn.com/content/v1/5b64ccb1f2e6b1be5f20a7f9/1537936647365-QPYSFNIGU6MGZ3E3QZ0P/nakusp-map-icoN.png?format=750w') %>
-         <% end %>
-     </div>
-
-     <div class="footer-action">
-       <%= link_to root_path do %>
-         <%= image_tag("https://images.squarespace-cdn.com/content/v1/5b64ccb1f2e6b1be5f20a7f9/1537936896176-246VSZF2SF26NXHY7OO9/nextdoor.png?format=750w") %>
-         <% end %>
-     </div>
-     <div class="footer-action">
-       <%= link_to root_path do %>
-         <%= image_tag('https://www.clipartmax.com/png/middle/261-2617205_chat-comments-chat-icon-vector-png.png') %>
-         <% end %>
-     </div>
+<div class="footer-wrap">
+ <div class='footer-action button'>
+    <%= link_to 'Map', parks_path %>
  </div>
+ <div class="footer-action button">
+   <%= link_to 'Chat','#' %>
+ </div>
+ <div class="footer-action button">
+  <%= link_to 'Dashboard', dashboard_path %>
+ </div>
+</div>
