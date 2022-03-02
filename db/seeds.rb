@@ -30,53 +30,53 @@ puts 'friendship created'
 # ---- creating 10 parks ----
 puts 'creating parks'
 Park.create!(
-  name: 'Park Ha Yarkon',
+  name: 'Ha-Yarkon dog park, Tel-Aviv',
   location: 'Hayarkon park Tel Aviv'
 )
 
 Park.create!(
-  name: 'Tverya Dog Park',
-  location: 'rotchild Tel Aviv'
+  name: 'kiryat sefer dog park, Tel-Aviv',
+  location: 'kiryat sefer garden Tel Aviv'
 )
 
 Park.create!(
-  name: 'Park Ha Yarkon Dog Park, Tel Aviv-Yafo',
-  location: 'ben yehuda Tel Aviv'
+  name: 'The independence dog park, Tel-Aviv',
+  location: 'the independence park Tel Aviv'
 )
 
 Park.create!(
-  name: 'Park Ha Yarkon Dog Park, Tel Aviv-Yafo',
+  name: 'Frisheman dog park, Tel-Aviv',
   location: 'frisheman Tel Aviv'
 )
 
 Park.create!(
-  name: 'Meir Garden Dog Park',
-  location: 'givatayim israel'
+  name: 'Arison Dog Park, Tel-Aviv',
+  location: 'arison tel aviv'
 )
 
 Park.create!(
-  name: 'Kikar Hamedina Dog Park',
-  location: 'Tel Aviv'
+  name: 'Gan meir Dog Park, Tel-Aviv',
+  location: 'gan meir Tel Aviv'
 )
 
 Park.create!(
-  name: 'Sheinkin Dog Park',
-  location: 'Tel Aviv'
+  name: 'Dvora baron Dog Park, Tel-Aviv',
+  location: 'dvora baron garden Tel Aviv'
 )
 
 Park.create!(
-  name: 'Dubnov Dog park',
-  location: 'Tel Aviv'
+  name: 'Sarona Dog park, Tel-Aviv',
+  location: 'sarona park Tel Aviv'
 )
 
 Park.create!(
-  name: 'Manshiya Dog Park',
-  location: 'Tel Aviv'
+  name: 'Dubnov Dog Park, Tel-Aviv',
+  location: 'dubnov Tel Aviv'
 )
 
 Park.create!(
-  name: 'Dogs Park - Midron',
-  location: 'Tel Aviv'
+  name: 'Zeev garden dog park, Tel-Aviv',
+  location: 'zeev garden Tel Aviv'
 )
 
 puts 'Seed migrated!'
