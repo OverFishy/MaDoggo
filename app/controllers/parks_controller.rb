@@ -24,6 +24,6 @@ def find_park
 end
 
 def park_params
-  params.require(:parks).permit(:name, :location, :latitude, :longitude [])
+  params.require(:parks).permit(:name, :location, :latitude, :longitude)
  end
 end
