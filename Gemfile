@@ -25,6 +25,15 @@ gem 'redis', '~> 4.0'
 # Use for map showing
 gem "geocoder"
 
+# Use for seed
+gem 'faker'
+
+# Use for sharing cloudinary key
+gem 'dotenv-rails', groups: [:development, :test]
+
+# Use for photo uploads
+gem 'cloudinary', '~> 1.16.0'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

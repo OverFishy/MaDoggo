@@ -1,4 +1,5 @@
 class Park < ApplicationRecord
+  has_one_attached :photo
   has_many :park_messages
   has_many :park_reviews
   has_many :park_visits
