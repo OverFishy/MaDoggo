@@ -10,6 +10,7 @@ class ParksController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { park: park })
       }
     end
+    render layout: "application_simple"
   end
 
 

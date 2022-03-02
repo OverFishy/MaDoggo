@@ -1,4 +1,3 @@
-<img src="" alt="dog park">
-<h2><%= park.name %></h2>
-<p><%= park.location %></p>
+<%= cl_image_tag park.photo.key, height: 121, crop: :fill %>
+<h2 class="info-header"><%= park.name %></h2>
 <%= link_to 'show', park_path(park), class: "btn btn-primary", style: "margin: 18px;" %>
