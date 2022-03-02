@@ -25,6 +25,9 @@ gem 'redis', '~> 4.0'
 # Use for map showing
 gem "geocoder"
 
+# Use for seed
+gem 'faker'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
