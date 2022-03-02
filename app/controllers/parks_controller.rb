@@ -9,5 +9,6 @@ class ParksController < ApplicationController
         lng: park.longitude
       }
     end
+    render layout: "application_simple"
   end
 end
