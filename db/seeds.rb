@@ -76,28 +76,28 @@ park3 = Park.create!(
   name: 'The independence dog park, Tel-Aviv',
   location: 'the independence park Tel Aviv'
 )
-file3 = URI.open('https://photos.bringfido.com/attractions/6/7/0/9076/9076_28834.png?size=slide&density=2x')
+file3 = URI.open('https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2015/12/56-3651404-14036367387-5483030c0c-k.jpg')
 park3.photo.attach(io: file3, filename: 'park.png', content_type: 'image/png')
 
 park4 = Park.create!(
   name: 'Frisheman dog park, Tel-Aviv',
   location: 'frisheman Tel Aviv'
 )
-file4 = URI.open('https://photos.bringfido.com/attractions/6/7/0/9076/9076_28834.png?size=slide&density=2x')
+file4 = URI.open('https://img.theculturetrip.com/768x/smart/wp-content/uploads/2018/03/2045796.jpg')
 park4.photo.attach(io: file4, filename: 'park.png', content_type: 'image/png')
 
 park5 = Park.create!(
   name: 'Arison Dog Park, Tel-Aviv',
   location: 'arison tel aviv'
 )
-file5 = URI.open('https://photos.bringfido.com/attractions/6/7/0/9076/9076_28834.png?size=slide&density=2x')
+file5 = URI.open('https://www.mesaparks.com/home/showpublishedimage/23732/637044005290900000')
 park5.photo.attach(io: file5, filename: 'park.png', content_type: 'image/png')
 
 park6 = Park.create!(
   name: 'Gan meir Dog Park, Tel-Aviv',
   location: 'gan meir Tel Aviv'
 )
-file6 = URI.open('https://photos.bringfido.com/attractions/6/7/0/9076/9076_28834.png?size=slide&density=2x')
+file6 = URI.open('https://israelbetweenthelines.com/wp-content/uploads/2017/09/ibl-1020x510-73.png')
 park6.photo.attach(io: file6, filename: 'park.png', content_type: 'image/png')
 
 park7 = Park.create!(
@@ -111,14 +111,14 @@ park8 = Park.create!(
   name: 'Sarona Dog park, Tel-Aviv',
   location: 'sarona park Tel Aviv'
 )
-file8 = URI.open('https://photos.bringfido.com/attractions/6/7/0/9076/9076_28834.png?size=slide&density=2x')
+file8 = URI.open('https://upload.wikimedia.org/wikipedia/commons/c/ca/Tompkins_Square_Big_Dog_Run.JPG')
 park8.photo.attach(io: file8, filename: 'park.png', content_type: 'image/png')
 
 park9 = Park.create!(
   name: 'Dubnov Dog Park, Tel-Aviv',
   location: 'dubnov Tel Aviv'
 )
-file9 = URI.open('https://photos.bringfido.com/attractions/6/7/0/9076/9076_28834.png?size=slide&density=2x')
+file9 = URI.open('https://d34c09ztlk5mrb.cloudfront.net/cunningham-recreation/d2sacxxyngi6cb_cloudfront_net/Dog-Park-Image_183d17ce614a305ef7e14498bef98c4b.jpg')
 park9.photo.attach(io: file9, filename: 'park.png', content_type: 'image/png')
 
 park10 = Park.create!(
