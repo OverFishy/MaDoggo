@@ -1,11 +1,19 @@
-<div class="footer-wrap">
- <div class='footer-action button'>
-    <%= link_to 'Map', parks_path %>
- </div>
- <div class="footer-action button">
-   <%= link_to 'Chat','#' %>
- </div>
- <div class="footer-action button">
-  <%= link_to 'Dashboard', dashboard_path %>
- </div>
+<div class="footer">
+  <div class="footer-action <%= current_page?(parks_path) ? 'active' : ''  %>">
+    <%= link_to parks_path do %>
+      <%= image_tag('https://www.shareicon.net/data/512x512/2015/09/21/644234_pin_512x512.png') %>
+      <% end %>
+  </div>
+
+  <div class="footer-action <%= current_page?(root_path) ? 'active' : ''  %>">
+    <%= link_to root_path do %>
+      <%= image_tag("https://freepikpsd.com/file/2019/10/dog-home-png-1-Transparent-Images.png") %>
+      <% end %>
+  </div>
+
+  <div class="footer-action <%= current_page?(dashboard_path) ? 'active' : ''  %>">
+    <%= link_to dashboard_path do %>
+      <%= image_tag('https://uxwing.com/wp-content/themes/uxwing/download/29-animals-and-birds/dog-care.png') %>
+      <% end %>
+  </div>
 </div>

@@ -6,9 +6,26 @@ class ParksController < ApplicationController
     @markers = @parks.geocoded.map do |park|
       {
         lat: park.latitude,
-        lng: park.longitude
+        lng: park.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { park: park })
       }
     end
     render layout: "application_simple"
   end
+
+
+def show
+  @park = Park.find(params[:id])
+end
+
+
+private
+
+def find_park
+  @parks = Park.find(params[:id])
+end
+
+def park_params
+  params.require(:parks).permit(:name, :location, :latitude, :longitude)
+ end
 end
