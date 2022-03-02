@@ -1,18 +1,19 @@
 <div class="footer">
-     <div class="footer-action">
-       <%= link_to root_path do %>
-         <%= image_tag('https://images.squarespace-cdn.com/content/v1/5b64ccb1f2e6b1be5f20a7f9/1537936647365-QPYSFNIGU6MGZ3E3QZ0P/nakusp-map-icoN.png?format=750w') %>
+     <div class="footer-action <%= current_page?(parks_path) ? 'active' : ''  %>">
+       <%= link_to parks_path do %>
+         <%= image_tag('https://www.shareicon.net/data/512x512/2015/09/21/644234_pin_512x512.png') %>
          <% end %>
      </div>
 
-     <div class="footer-action">
+     <div class="footer-action <%= current_page?(root_path) ? 'active' : ''  %>">
        <%= link_to root_path do %>
-         <%= image_tag("https://images.squarespace-cdn.com/content/v1/5b64ccb1f2e6b1be5f20a7f9/1537936896176-246VSZF2SF26NXHY7OO9/nextdoor.png?format=750w") %>
+         <%= image_tag("https://freepikpsd.com/file/2019/10/dog-home-png-1-Transparent-Images.png") %>
          <% end %>
      </div>
-     <div class="footer-action">
-       <%= link_to root_path do %>
-         <%= image_tag('https://www.clipartmax.com/png/middle/261-2617205_chat-comments-chat-icon-vector-png.png') %>
+
+     <div class="footer-action <%= current_page?(dashboard_path) ? 'active' : ''  %>">
+       <%= link_to dashboard_path do %>
+         <%= image_tag('https://uxwing.com/wp-content/themes/uxwing/download/29-animals-and-birds/dog-care.png') %>
          <% end %>
      </div>
  </div>
