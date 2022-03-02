@@ -1,21 +1,26 @@
 .footer {
   width: 100%;
-  background-color: white;
   display: flex;
+  border-top: 1px solid grey;
+  margin: 2px;
+  padding: 8px;
 
   .footer-action {
-    border: 1px solid black;
     width: 33%;
     text-align: center;
     border-radius: 14px;
   }
 
   img {
-    max-width: 100%;
+    max-width: 25%;
   }
 }
 
-
+.active {
+  // background: linear-gradient( to bottom, #7353BA, #F49FBC);
+  box-shadow: 2px 2px 2px 2px #7353BA;
+  padding: 2px;
+}
 
 html, body {
   height: 100%;
