@@ -90,14 +90,14 @@ park5 = Park.create!(
   name: 'Arison Dog Park, Tel-Aviv',
   location: 'arison tel aviv'
 )
-file5 = URI.open('https://www.mesaparks.com/home/showpublishedimage/23732/637044005290900000')
+file5 = URI.open('https://www.k9ofmine.com/wp-content/uploads/2021/01/dog-park-alternatives-900x549.jpg')
 park5.photo.attach(io: file5, filename: 'park.png', content_type: 'image/png')
 
 park6 = Park.create!(
   name: 'Gan meir Dog Park, Tel-Aviv',
   location: 'gan meir Tel Aviv'
 )
-file6 = URI.open('https://israelbetweenthelines.com/wp-content/uploads/2017/09/ibl-1020x510-73.png')
+file6 = URI.open('https://media.istockphoto.com/photos/dogs-playing-at-public-park-picture-id1210828938?k=20&m=1210828938&s=612x612&w=0&h=A0iF7IGhJryX35xgP4jCgiG0vIvUsduUTxQmlL2boVc=')
 park6.photo.attach(io: file6, filename: 'park.png', content_type: 'image/png')
 
 park7 = Park.create!(
