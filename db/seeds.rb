@@ -13,57 +13,84 @@ puts 'DB cleaned'
 
 # ---- creating users & friendship ----
 
-puts 'creating 2 users'
+puts 'creating 4 users'
 
-user1 = User.create!(
+ofek = User.create!(
   password: '1234567',
-  email: 'o@o.com'
+  email: 'ofek@gmail.com',
+  name: 'Ofek'
 )
 
-user2 = User.create!(
+luke = User.create!(
   password: '1234567',
-  email: 'l@l.com'
+  email: 'luke@gamil.com',
+  name: 'Luke'
 )
-puts '2 users created'
 
-puts 'creating friendship'
+daniel = User.create!(
+  password: '1234567',
+  email: 'daniel@gamil.com',
+  name: 'Daniel'
+)
+
+deborah = User.create!(
+  password: '1234567',
+  email: 'deborah@gamil.com',
+  name: 'Deborah'
+)
+puts '4 users created'
+
+puts 'creating friendships'
 
 Friendship.create!(
-  user1: user1,
-  user2: user2,
+  user1: ofek,
+  user2: luke,
   status: 's'
 )
-puts 'friendship created'
 
-# ---- creating 10 dogs for users ----
+Friendship.create!(
+  user1: ofek,
+  user2: daniel,
+  status: 's'
+)
 
-puts 'creating 10 dogs'
+Friendship.create!(
+  user1: ofek,
+  user2: deborah,
+  status: 's'
+)
 
-10.times do
+puts 'friendships created'
+
+# ---- creating 15 dogs for users ----
+
+puts 'creating 15 dogs'
+
+15.times do
   Dog.create!(
     name: Faker::Creature::Dog.name,
     gender: Faker::Creature::Dog.gender,
     breed: Faker::Creature::Dog.breed,
     age: rand(1..20),
     size: Faker::Creature::Dog.size,
-    user: [user1, user2].sample
+    user: [ofek, deborah, luke, daniel].sample
   )
 end
 
-puts '10 dogs created'
+puts '15 dogs created'
 
 # ---- creating 10 parks ----
 
 puts 'creating parks'
 
-park1 = Park.create!(
+hayarkon = Park.create!(
   name: 'Ha-Yarkon dog park, Tel-Aviv',
   location: 'Hayarkon park Tel Aviv',
 )
 
 file1 = URI.open('https://humaneheroes.org/wp-content/uploads/2019/09/txhh_best-practices-when-taking-dog-park.png')
 
-park1.photo.attach(io: file1, filename: 'park.png', content_type: 'image/png')
+hayarkon.photo.attach(io: file1, filename: 'park.png', content_type: 'image/png')
 
 park2 = Park.create!(
   name: 'kiryat sefer dog park, Tel-Aviv',
@@ -72,12 +99,13 @@ park2 = Park.create!(
 file2 = URI.open('https://static.timesofisrael.com/www/uploads/2016/08/F150618MA013-640x400.jpg')
 park2.photo.attach(io: file2, filename: 'park.png', content_type: 'image/png')
 
-park3 = Park.create!(
+independence = Park.create!(
   name: 'The independence dog park, Tel-Aviv',
   location: 'the independence park Tel Aviv'
 )
+
 file3 = URI.open('https://media.istockphoto.com/photos/dogs-playing-at-public-park-picture-id1210828938?k=20&m=1210828938&s=612x612&w=0&h=A0iF7IGhJryX35xgP4jCgiG0vIvUsduUTxQmlL2boVc=')
-park3.photo.attach(io: file3, filename: 'park.png', content_type: 'image/png')
+independence.photo.attach(io: file3, filename: 'park.png', content_type: 'image/png')
 
 park4 = Park.create!(
   name: 'Frisheman dog park, Tel-Aviv',
@@ -132,13 +160,23 @@ puts 'parks created'
 
 # ---- creating parks visits ----
 
-puts 'creating park visit'
+puts 'creating 3 park visit'
 
 ParkVisit.create!(
-  park: park1,
-  user: user2
+  park: hayarkon,
+  user: luke
 )
 
-puts 'park visit created'
+ParkVisit.create!(
+  park: independence,
+  user: daniel
+)
+
+ParkVisit.create!(
+  park: independence,
+  user: deborah
+)
+
+puts '3 park visit created'
 
 puts 'Seed migrated!'
