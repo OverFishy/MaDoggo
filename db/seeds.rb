@@ -62,7 +62,7 @@ Friendship.create!(
 
 puts 'friendships created'
 
-# ---- creating 10 dogs for users ----
+# ---- creating 15 dogs for users ----
 
 puts 'creating 15 dogs'
 
@@ -77,20 +77,20 @@ puts 'creating 15 dogs'
   )
 end
 
-puts '15dogs created'
+puts '15 dogs created'
 
 # ---- creating 10 parks ----
 
 puts 'creating parks'
 
-park1 = Park.create!(
+hayarkon = Park.create!(
   name: 'Ha-Yarkon dog park, Tel-Aviv',
   location: 'Hayarkon park Tel Aviv',
 )
 
 file1 = URI.open('https://humaneheroes.org/wp-content/uploads/2019/09/txhh_best-practices-when-taking-dog-park.png')
 
-park1.photo.attach(io: file1, filename: 'park.png', content_type: 'image/png')
+hayarkon.photo.attach(io: file1, filename: 'park.png', content_type: 'image/png')
 
 park2 = Park.create!(
   name: 'kiryat sefer dog park, Tel-Aviv',
@@ -99,12 +99,12 @@ park2 = Park.create!(
 file2 = URI.open('https://static.timesofisrael.com/www/uploads/2016/08/F150618MA013-640x400.jpg')
 park2.photo.attach(io: file2, filename: 'park.png', content_type: 'image/png')
 
-park3 = Park.create!(
+independence = Park.create!(
   name: 'The independence dog park, Tel-Aviv',
   location: 'the independence park Tel Aviv'
 )
 file3 = URI.open('https://photos.bringfido.com/attractions/6/7/0/9076/9076_28834.png?size=slide&density=2x')
-park3.photo.attach(io: file3, filename: 'park.png', content_type: 'image/png')
+independence.photo.attach(io: file3, filename: 'park.png', content_type: 'image/png')
 
 park4 = Park.create!(
   name: 'Frisheman dog park, Tel-Aviv',
@@ -159,13 +159,23 @@ puts 'parks created'
 
 # ---- creating parks visits ----
 
-puts 'creating park visit'
+puts 'creating 3 park visit'
 
 ParkVisit.create!(
-  park: park1,
+  park: hayarkon,
   user: luke
 )
 
-puts 'park visit created'
+ParkVisit.create!(
+  park: independence,
+  user: daniel
+)
+
+ParkVisit.create!(
+  park: independence,
+  user: deborah
+)
+
+puts '3 park visit created'
 
 puts 'Seed migrated!'
