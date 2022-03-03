@@ -1,4 +1,32 @@
-<h1>Dash-Board</h1>
+<div class="container">
+  <h1>Dash-Board</h1>
+  <div class="usercard">
+  </div>
+
+  <%# Add a dog %>
+
+  <div class="container dogs">
+    <% @user_dogs.each do |dog| %>
+      <%= render "parks/dog", dog: dog %>
+    <% end %>
+  </div>
+
+  <div class="container friends">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2><%= @user.email %></h2>
 <% @user_dogs.each do |dog| %>
  <p> <%= dog.name %></p>
