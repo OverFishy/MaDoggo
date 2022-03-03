@@ -13,44 +13,71 @@ puts 'DB cleaned'
 
 # ---- creating users & friendship ----
 
-puts 'creating 2 users'
+puts 'creating 4 users'
 
-user1 = User.create!(
+ofek = User.create!(
   password: '1234567',
-  email: 'o@o.com'
+  email: 'ofek@gmail.com',
+  name: 'Ofek'
 )
 
-user2 = User.create!(
+luke = User.create!(
   password: '1234567',
-  email: 'l@l.com'
+  email: 'luke@gamil.com',
+  name: 'Luke'
 )
-puts '2 users created'
 
-puts 'creating friendship'
+daniel = User.create!(
+  password: '1234567',
+  email: 'daniel@gamil.com',
+  name: 'Daniel'
+)
+
+deborah = User.create!(
+  password: '1234567',
+  email: 'deborah@gamil.com',
+  name: 'Deborah'
+)
+puts '4 users created'
+
+puts 'creating friendships'
 
 Friendship.create!(
-  user1: user1,
-  user2: user2,
+  user1: ofek,
+  user2: luke,
   status: 's'
 )
-puts 'friendship created'
+
+Friendship.create!(
+  user1: ofek,
+  user2: daniel,
+  status: 's'
+)
+
+Friendship.create!(
+  user1: ofek,
+  user2: deborah,
+  status: 's'
+)
+
+puts 'friendships created'
 
 # ---- creating 10 dogs for users ----
 
-puts 'creating 10 dogs'
+puts 'creating 15 dogs'
 
-10.times do
+15.times do
   Dog.create!(
     name: Faker::Creature::Dog.name,
     gender: Faker::Creature::Dog.gender,
     breed: Faker::Creature::Dog.breed,
     age: rand(1..20),
     size: Faker::Creature::Dog.size,
-    user: [user1, user2].sample
+    user: [ofek, deborah, luke, daniel].sample
   )
 end
 
-puts '10 dogs created'
+puts '15dogs created'
 
 # ---- creating 10 parks ----
 
@@ -136,7 +163,7 @@ puts 'creating park visit'
 
 ParkVisit.create!(
   park: park1,
-  user: user2
+  user: luke
 )
 
 puts 'park visit created'
