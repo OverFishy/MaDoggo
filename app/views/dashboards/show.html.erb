@@ -4,14 +4,14 @@
   <div class="usercard">
   </div>
 
-  <%# Add a dog %>
-
   <div class="container dogs">
     <h4>Your doggos:</h4>
     <% @user_dogs.each do |dog| %>
       <%= render "parks/dog", dog: dog %>
     <% end %>
   </div>
+
+<%= link_to 'Add a dog', new_dog_path %>
 
   <div class="container friends">
     <h4>Your friends:</h4>
