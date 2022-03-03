@@ -23,19 +23,19 @@ ofek = User.create!(
 
 luke = User.create!(
   password: '1234567',
-  email: 'luke@gamil.com',
+  email: 'luke@gmail.com',
   name: 'Luke'
 )
 
 daniel = User.create!(
   password: '1234567',
-  email: 'daniel@gamil.com',
+  email: 'daniel@gmail.com',
   name: 'Daniel'
 )
 
 deborah = User.create!(
   password: '1234567',
-  email: 'deborah@gamil.com',
+  email: 'deborah@gmail.com',
   name: 'Deborah'
 )
 puts '4 users created'
