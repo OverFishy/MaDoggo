@@ -1,4 +1,16 @@
-<div class="container">
-  <%= render "form",  dog: @dog %>
+<div class="container add-dog-container">
+  <div class="x">
+    <%= image_tag "close.png" %>
+  </div>
+
+  <div class="navigation-container">
+    <%= image_tag "arrow.png" %>
+    <div class="navigation">
+      <div class="o"></div>
+      <div class="o"></div>
+      <div class="o"></div>
+      <div class="o"></div>
+    </div>
+    <%= image_tag "right-arrow.png" %>
+  </div>
 </div>
-<%= link_to 'Back', root_path %>
