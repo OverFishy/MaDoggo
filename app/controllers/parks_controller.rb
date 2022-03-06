@@ -13,11 +13,9 @@ class ParksController < ApplicationController
     render layout: "application_simple"
   end
 
-
   def show
     @park = Park.find(params[:id])
   end
-
 
   private
 
