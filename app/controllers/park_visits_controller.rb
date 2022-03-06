@@ -12,3 +12,5 @@ class ParkVisitsController < ApplicationController
     redirect_to park_path(@park_visit.park)
   end
 end
+
+# test
