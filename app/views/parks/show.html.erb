@@ -1,13 +1,34 @@
 
 <div class="container">
-
   <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
   <% @park.dogs.each do |dog| %>
     <%= render "dog_park", dog: dog %>
   <% end %>
-  <div class = 'buttons-container'>
-    <button id="attend" class="btn1" style="margin-left: 10px;"><%= link_to 'Attend', dashboard_path %></button>
-    <button class="btn1" style="margin-left: 10px;"><%= link_to 'chat', root_path %></button>
-    <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
-  </div>
+  
+  <h1 style="text-align: center; color: black; margin-top: 110px;"><strong><%= @park.name %></strong></h1>
+  <%= link_to "park's chat", park_chat_path(@park) %>
+  
+  <% @park.dogs.each do |dog| %>
+    <%= render "dog_park", dog: dog %>
+  <% end %>
+  
+  <%= render "attend_button", park: @park, park_visit: @park_visit %>
+  <button class="btn1" style="margin-left: 10px;"><%= link_to 'chat', root_path %></button>
+  <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
 </div>
+
+<h3>Reviews</h3>
+<% @park.park_reviews.each do |review| %>
+  <div class="review">
+    <p><span><% x = review.rating  %>
+    <% x.times {  %>
+     ⭐
+    <% } %>
+     </span></p>
+
+    <p><%= review.review %></p>
+  </div>
+<% end %>
+
+
+  <%= link_to "leave a review",  new_park_park_review_path(@park), class: "btn btn-primary" %>
