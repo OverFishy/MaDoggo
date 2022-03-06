@@ -30,10 +30,16 @@ body {
   flex-direction: column;
 }
 .content {
-  // flex: 1 0 auto;
+  flex: 1 0 auto;
+  // max-height: 85vh;
+  // overflow-y: scroll;
+}
+
+.content1 {
   max-height: 85vh;
   overflow-y: scroll;
 }
+
 .footer {
   flex-shrink: 0;
   position: absolute;
