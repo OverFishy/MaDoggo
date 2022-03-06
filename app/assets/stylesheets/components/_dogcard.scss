@@ -5,20 +5,26 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  padding: 12px;
+  margin: 16px;
+  border-radius: 20px;
 }
+
 
 .card-dog img {
   height: 100%;
   width: 120px;
   object-fit: cover;
+  border-radius: 50px;
 }
 
 .card-dog h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+  font-size: 14px;
+  margin: 4px;
+  text-align: justify;
+  padding: 1px;
 }
+
 
 .card-dog p {
   font-size: 12px;
@@ -30,4 +36,9 @@
 
 .card-dog .card-dog-infos {
   padding: 16px;
+}
+
+
+.breed {
+  display: flex;
 }

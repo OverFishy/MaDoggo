@@ -2,8 +2,11 @@
   <%#= image_tag "app/assets/images/dog-in-bowtie.jpg" %>
   <%= image_tag "dog-in-bowtie.jpg" %>
   <div class="card-dog-infos">
-    <h2><%= dog.name %></h2>
-    <h2><%= dog.breed %></h2>
-    <h2><%= dog.size %></h2>
+    <h2><strong><%= dog.name %></strong></h2>
+    <div class="breed" style >
+      <i class="fa fa-solid fa-dog"> </i>
+      <h2><%= dog.breed %></h2>
+    </div>
+    <h2><%= dog_size(dog) %></h2>
   </div>
 </div>

@@ -1,12 +1,12 @@
 
 <div class="container">
 
-  <h1 style="text-align: center; color: black; margin-top: 110px;"><strong><%= @park.name %></strong></h1>
+  <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
   <% @park.dogs.each do |dog| %>
     <%= render "dog_park", dog: dog %>
   <% end %>
   <div class = 'buttons-container'>
-    <button class="btn1" style="margin-left: 10px;"><%= link_to 'Attend', dashboard_path %></button>
+    <button id="attend" class="btn1" style="margin-left: 10px;"><%= link_to 'Attend', dashboard_path %></button>
     <button class="btn1" style="margin-left: 10px;"><%= link_to 'chat', root_path %></button>
     <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
   </div>
