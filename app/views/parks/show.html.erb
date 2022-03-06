@@ -5,9 +5,12 @@
   <% @park.dogs.each do |dog| %>
     <%= render "dog_park", dog: dog %>
   <% end %>
-  <button class="btn1" style="margin-left: 10px;"><%= link_to 'Attend', root_path %></button>
-  <button class="btn1" style="margin-left: 10px;"><%= link_to 'chat', root_path %></button>
-  <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
+  
+  <div class = 'buttons-container'>
+    <button class="btn1" style="margin-left: 10px;"><%= link_to 'Attend', root_path %></button>
+    <button class="btn1" style="margin-left: 10px;"><%= link_to 'chat', root_path %></button>
+    <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
+  </div>
 </div>
 
 <h3>Reviews</h3>

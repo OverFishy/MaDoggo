@@ -9,7 +9,6 @@ class ParkReviewsController < ApplicationController
     @park = Park.find(params[:park_id])
     @review.user = current_user
     @review.park = @park
-
     if @review.save
       redirect_to park_path(@park)
     else
@@ -23,6 +22,3 @@ class ParkReviewsController < ApplicationController
     params.require(:park_review).permit(:review, :rating)
   end
 end
-
-
-#.permit(:text, , :user_id, :park_id)
