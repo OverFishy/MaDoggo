@@ -1,26 +1,25 @@
-.card-dog {
+.card-product {
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 
-.card-dog img {
+.card-product img {
   height: 100%;
   width: 120px;
   object-fit: cover;
 }
 
-.card-dog h2 {
+.card-product h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-dog p {
+.card-product p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -28,6 +27,6 @@
   margin-top: 8px;
 }
 
-.card-dog .card-dog-infos {
+.card-product .card-product-infos {
   padding: 16px;
 }

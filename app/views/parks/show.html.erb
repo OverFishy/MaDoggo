@@ -3,9 +3,11 @@
 
   <h1 style="text-align: center; color: black; margin-top: 110px;"><strong><%= @park.name %></strong></h1>
   <% @park.dogs.each do |dog| %>
-    <%= render "dog", dog: dog %>
+   <%= render "dog", dog: dog %>
   <% end %>
-  <button class="btn1" style="margin-left: 10px;"><%= link_to 'Attend', dashboard_path %></button>
-  <button class="btn1" style="margin-left: 10px;"><%= link_to 'chat', root_path %></button>
-  <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
+  <div class="button-container">
+    <button class="btn1" style="margin-left: 10px;"><%= link_to 'Attend', dashboard_path %></button>
+    <button class="btn1" style="margin-left: 10px;"><%= link_to 'chat', root_path %></button>
+    <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
+  </div>
 </div>
