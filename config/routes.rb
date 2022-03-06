@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :dogs, only: %i[new create show]
   resources :parks, only: %i[index show] do
     resources :park_reviews, only: %i[new create]
+    get 'chat', to: 'park_messages#index'
+    resources :park_messages, only: :create
   end
   resource :dashboard, only: [:show]
   # Defines the root path route ("/")

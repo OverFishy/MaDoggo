@@ -1,0 +1,24 @@
+<div
+  data-controller="chatroom-subscription"
+  data-chatroom-subscription-chatroom-id-value="<%= @park.id %>">
+
+  <h1>#<%= @park.name %> chatroom</h1>
+
+<div class="messages" data-chatroom-subscription-target="messages">
+  <% @park_messages.each do |message| %>
+    <%= render "park_messages/message", message: message %>
+  <% end %>
+</div>
+
+  <%= simple_form_for [@park, @park_message], data: { "chatroom-subscription-target": 'form' },
+    remote: true,
+    html: {class: "d-flex"} do |f|
+  %>
+    <%= f.input :message,
+      label: false,
+      placeholder: "Message... ",
+      wrapper_html: {class: "flex-grow-1"}
+    %>
+    <%= f.submit "Send", class: "btn btn-primary" %>
+  <% end %>
+</div>
