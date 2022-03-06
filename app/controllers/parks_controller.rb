@@ -16,6 +16,7 @@ class ParksController < ApplicationController
 
   def show
     @park = Park.find(params[:id])
+    @park_visit = ParkVisit.find_by(user: current_user, park: @park) || ParkVisit.new
   end
 
 

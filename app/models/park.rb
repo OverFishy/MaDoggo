@@ -8,4 +8,9 @@ class Park < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
+
+  def visited_by(user)
+    # if there is a park visit, return true
+    !ParkVisit.find_by(user: user, park: self).nil?
+  end
 end
