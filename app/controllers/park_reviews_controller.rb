@@ -6,9 +6,9 @@ class ParkReviewsController < ApplicationController
 
   def create
     @review = ParkReview.new(review_params)
-    #@park = Park.find(params[:park_id])
-    @park.reviews = @review
-
+    @park = Park.find(params[:park_id])
+    @review.user = current_user
+    @review.park = @park
     if @review.save
       redirect_to park_path(@park)
     else
@@ -19,9 +19,6 @@ class ParkReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:content)
+    params.require(:park_review).permit(:review, :rating)
   end
 end
-
-
-#.permit(:text, :stars, :user_id, :park_id)
