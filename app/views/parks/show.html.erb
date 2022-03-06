@@ -5,7 +5,23 @@
   <% @park.dogs.each do |dog| %>
     <%= render "dog_park", dog: dog %>
   <% end %>
-  <button class="btn1" style="margin-left: 10px;"><%= link_to 'Attend', dashboard_path %></button>
+  <button class="btn1" style="margin-left: 10px;"><%= link_to 'Attend', root_path %></button>
   <button class="btn1" style="margin-left: 10px;"><%= link_to 'chat', root_path %></button>
   <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
 </div>
+
+<h3>Reviews</h3>
+<% @park.park_reviews.each do |review| %>
+  <div class="review">
+    <p><span><% x = review.rating  %>
+    <% x.times {  %>
+     ⭐
+    <% } %>
+     </span></p>
+
+    <p><%= review.review %></p>
+  </div>
+<% end %>
+
+
+  <%= link_to "leave a review",  new_park_park_review_path(@park), class: "btn btn-primary" %>
