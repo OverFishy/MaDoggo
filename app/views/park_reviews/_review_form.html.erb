@@ -1,0 +1,6 @@
+<%= simple_form_for [park, review] do |f| %>
+  <%= f.input :review %>
+  <%= f.input :rating %>
+  <%#= f.input :image %>
+  <%= f.submit "Add rating to park", class: "btn btn-primary" %>
+<% end %>
