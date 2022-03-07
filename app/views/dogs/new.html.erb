@@ -1,16 +1,29 @@
-<div class="container add-dog-container">
+<div class="add-dog-container">
   <div class="x">
     <%= image_tag "close.png" %>
   </div>
-
+  <div class="page-container">
+    <div class="slide-page">
+      <%= render 'traits' %>
+    </div>
+    <div class="slide-page">
+      <%#= render 'PLACEHOLDER' %>
+    </div>
+    <div class="slide-page">
+      <%#= render 'PLACEHOLDER' %>
+    </div>
+    <div class="slide-page">
+      <%#= render 'PLACEHOLDER' %>
+    </div>
+  </div>
   <div class="navigation-container">
-    <%= image_tag "arrow.png" %>
+    <%= image_tag "arrow.png", class: "left-arrow" %>
     <div class="navigation">
       <div class="o"></div>
       <div class="o"></div>
       <div class="o"></div>
       <div class="o"></div>
     </div>
-    <%= image_tag "right-arrow.png" %>
+    <%= image_tag "right-arrow.png", class: "right-arrow" %>
   </div>
 </div>
