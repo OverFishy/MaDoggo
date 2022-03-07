@@ -13,4 +13,8 @@ class Park < ApplicationRecord
     # if there is a park visit, return true
     !ParkVisit.find_by(user: user, park: self).nil?
   end
+
+  def average_rating
+    ParkReview.where(:park => self).average(:rating)
+  end
 end
