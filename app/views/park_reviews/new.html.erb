@@ -1,3 +1,4 @@
 <h1>Review</h1>
+<%= cl_image_tag @park.photo.key, height: 121, crop: :fill, class: "park-img" %>
 <h2>Add a review for <%= @park.name %></h2>
 <%= render 'review_form', park: @park, review: @review %>
