@@ -1,0 +1,8 @@
+<h1>Review</h1>
+<% if @park.photo.attached? %>
+  <%= cl_image_tag park.photo.key, height: 121, crop: :fill, class: "park-img" %>
+<% else %>
+   <%= image_tag('dog-park.png', height: 121, crop: :fill, class: "park-img") %>
+<% end  %>
+<h2>Add a review for <%= @park.name %></h2>
+<%= render 'review_form', park: @park, review: @review %>

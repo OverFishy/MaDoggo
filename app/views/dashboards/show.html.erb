@@ -1,17 +1,18 @@
 <div class="container">
-  <h1>Dash-Board</h1>
-  <h2><%= @user.email %></h2>
+  <%# <h1>DashBoard</h1> %>
+  <h2 class="hello">Hello <%= @user.name %>!</h2>
+  <%= image_tag "manwdog", class: "profilepic" %>
   <div class="usercard">
   </div>
 
-  <%# Add a dog %>
-
   <div class="container dogs">
-    <h4>Your doggos:</h4>
+    <h4>Doggos:</h4>
     <% @user_dogs.each do |dog| %>
       <%= render "parks/dog", dog: dog %>
     <% end %>
   </div>
+
+<%= link_to 'Add a dog', new_dog_path %>
 
   <div class="container friends">
     <h4>Your friends:</h4>

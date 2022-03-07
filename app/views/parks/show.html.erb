@@ -1,2 +1,31 @@
+
 <div class="container">
- <h1 style="text-align: center; color: black; margin-top: 110px;"><strong><%= @park.name %></strong></h1>
+  <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
+  <% if @park.photo.attached? %>
+    <%= cl_image_tag park.photo.key, height: 121, crop: :fill, class: "park-img" %>
+  <% else %>
+    <%= image_tag('dog-park.png', height: 121, crop: :fill, class: "park-img") %>
+  <% end  %>
+  <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
+  <%= link_to "leave a review",  new_park_park_review_path(@park), class: "btn btn-primary" %>
+  <%= link_to "park's chat", park_chat_path(@park), class: "btn btn-primary" %>
+  <%= render "attend_button", park: @park, park_visit: @park_visit %>
+  <% @park.dogs.each do |dog| %>
+    <%= render "dog_park", dog: dog %>
+  <% end %>
+  <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
+</div>
+<div class= "container  ">
+<h3>Reviews</h3>
+<% @park.park_reviews.each do |review| %>
+  <div class="review card-review">
+    <p><span><% x = review.rating  %>
+    <% x.times {  %>
+    ⭐
+    <% } %>
+    </span></p>
+
+    <p><%= review.review %></p>
+  </div>
+<% end %>
+</div>

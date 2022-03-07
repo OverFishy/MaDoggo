@@ -1,6 +1,6 @@
 class ParksController < ApplicationController
   def index
-    @parks = Park.all
+    @parks = Park.all.includes(:dogs)
 
     # the `geocoded` scope filters only parks with coordinates (latitude & longitude)
     @markers = @parks.geocoded.map do |park|
@@ -13,19 +13,18 @@ class ParksController < ApplicationController
     render layout: "application_simple"
   end
 
+  def show
+    @park = Park.find(params[:id])
+    @park_visit = ParkVisit.find_by(user: current_user, park: @park) || ParkVisit.new
+  end
 
-def show
-  @park = Park.find(params[:id])
-end
+  private
 
+  def find_park
+    @parks = Park.find(params[:id])
+  end
 
-private
-
-def find_park
-  @parks = Park.find(params[:id])
-end
-
-def park_params
-  params.require(:parks).permit(:name, :location, :latitude, :longitude)
- end
+  def park_params
+    params.require(:parks).permit(:name, :location, :latitude, :longitude)
+  end
 end
