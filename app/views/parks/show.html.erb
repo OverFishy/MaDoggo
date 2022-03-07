@@ -1,7 +1,7 @@
 
 <div class="container">
+<h1 class="page-header" ><strong><%= @park.name %></strong></h1>
 <%= cl_image_tag @park.photo.key, height: 121, crop: :fill, class: "park-img" %>
-  <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
   <%= link_to "leave a review",  new_park_park_review_path(@park), class: "btn btn-primary" %>
   <%= link_to "park's chat", park_chat_path(@park), class: "btn btn-primary" %>
   <%= render "attend_button", park: @park, park_visit: @park_visit %>
