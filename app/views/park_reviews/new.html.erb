@@ -1,6 +1,6 @@
 <h1>Review</h1>
 <% if @park.photo.attached? %>
-  <%= cl_image_tag park.photo.key, height: 121, crop: :fill, class: "park-img" %>
+  <%= cl_image_tag @park.photo.key, height: 121, crop: :fill, class: "park-img" %>
 <% else %>
    <%= image_tag('dog-park.png', height: 121, crop: :fill, class: "park-img") %>
 <% end  %>

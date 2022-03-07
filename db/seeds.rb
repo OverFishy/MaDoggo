@@ -479,6 +479,25 @@ ParkVisit.create!(
   user: deborah
 )
 
+ParkVisit.create!(
+  park: park7,
+  user: james
+)
+
+ParkVisit.create!(
+  park: park7,
+  user: ava
+)
+
+ParkVisit.create!(
+  park: park9,
+  user: emma
+)
+
+ParkVisit.create!(
+  park: park5,
+  user: olivia
+)
 puts '3 park visit created'
 
 reviews = ['This is a wonderful park', 'It is the best park in the city',
