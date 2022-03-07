@@ -1,4 +1,8 @@
-<%= cl_image_tag park.photo.key, height: 121, crop: :fill %>
+<% if park.photo.attached? %>
+  <%= cl_image_tag park.photo.key, height: 121, crop: :fill %>
+<% else %>
+  <%= image_tag('dog-park.png', height: 121, crop: :fill) %>
+<% end  %>
 <h2 class="info-header"><%= park.name %></h2>
 <h3 class = "info-dog"><%= pluralize park.dogs.count, "dog" %> in this park</h3>
 <%= link_to 'show', park_path(park), class: "btn btn-primary", style: "margin: 18px;" %>
