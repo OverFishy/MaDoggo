@@ -16,7 +16,28 @@ puts 'DB cleaned'
 
 # # ---- creating users & friendship ----
 
-puts 'creating 4 users'
+puts 'creating 8 users'
+
+james = User.create!(
+  password: '1234567',
+  email: "james@gmail.com",
+  name: "james"
+)
+ava = User.create!(
+  password: '1234567',
+  email: "ava@gmail.com",
+  name: "ava"
+)
+emma = User.create!(
+  password: '1234567',
+  email: "emma@gmail.com",
+  name: "emma"
+)
+olivia = User.create!(
+  password: '1234567',
+  email: "olivia@gmail.com",
+  name: "olivia"
+)
 ofek = User.create!(
   password: '1234567',
   email: "ofek@gmail.com",
@@ -37,7 +58,7 @@ luke = User.create!(
   email: "luke@gmail.com",
   name: "luke"
 )
-puts '4 users created'
+puts '8 users created'
 
 puts 'creating friendships'
 
@@ -95,7 +116,7 @@ dog_data = [
     breed: Faker::Creature::Dog.breed,
     age: 2,
     size: :small,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: ofek,
     traits: %w[pupper curious],
     photo_url: 'https://media-be.chewy.com/wp-content/uploads/2021/06/02102132/Pomeranian_Featured-Image.jpg'
   },
@@ -106,7 +127,7 @@ dog_data = [
     breed: :mixed,
     age: 6,
     size: :medium,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: deborah,
     traits: %w[energetic playful social],
     photo_url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mixed-breed-dog-portrait-royalty-free-image-1154295393-1563379374.jpg?crop=0.47619xw:1xh;center,top&resize=480:*'
   },
@@ -117,7 +138,7 @@ dog_data = [
     breed: :mixed,
     age: rand(1..15),
     size: :medium,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: deborah,
     traits: %w[friendly zoomies naughty],
     photo_url: 'https://assets.slice.ca/wp-content/uploads/2015/02/cutest-mixed-breed-dogs1.jpg'
   },
@@ -128,7 +149,7 @@ dog_data = [
     breed: :mixed,
     age: rand(17),
     size: :medium,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: luke,
     traits: %w[senior timid calm],
     photo_url: 'https://static.boredpanda.com/blog/wp-content/uploads/2014/03/mixed-breed-dogs-27.jpg'
   },
@@ -139,7 +160,7 @@ dog_data = [
     breed: :mixed,
     age: rand(13),
     size: :medium,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: luke,
     traits: %w[friendly calm loyal],
     photo_url: 'https://wl-brightside.cf.tsp.li/resize/728x/jpg/2d2/908/9e46075514839a75bccfb0b6c8.jpg'
   },
@@ -150,7 +171,7 @@ dog_data = [
     breed: "golden retriever",
     age: rand(6),
     size: :medium,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: daniel,
     traits: %w[friendly zoomies loyal],
     photo_url: 'https://images.saymedia-content.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTc0MDk2MzYxNjM1OTgwODY2/what-you-should-know-about-owning-a-golden-retriever.jpg'
   },
@@ -161,7 +182,7 @@ dog_data = [
     breed: "golden retriever",
     age: 1,
     size: :medium,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: daniel,
     traits: %w[pupper naughty playful],
     photo_url: 'https://images.unsplash.com/photo-1615233500064-caa995e2f9dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z29sZGVuJTIwcmV0cmlldmVyJTIwcHVwcHl8ZW58MHx8MHx8&w=1000&q=80'
   },
@@ -172,7 +193,7 @@ dog_data = [
     breed: "golden retriever",
     age: 2,
     size: :small,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: daniel,
     traits: %w[pupper fluffy energetic],
     photo_url: 'https://www.zooplus.co.uk/magazine/wp-content/uploads/2019/03/Golden-retriever-dog-breed-1.jpg'
   },
@@ -183,7 +204,7 @@ dog_data = [
     breed: :bulldog,
     age: 10,
     size: :medium,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: olivia,
     traits: %w[intelligent anxious senior],
     photo_url: 'https://www.thesprucepets.com/thmb/FEsGt1xpqpRi_YzoMCuzPEWcvso=/872x654/smart/filters:no_upscale()/1024px-Bulldog_inglese-cf544d354159462c8c0d93db5f1adbe6.jpg'
   },
@@ -194,7 +215,7 @@ dog_data = [
     breed: :bulldog,
     age: 7,
     size: :medium,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: emma,
     traits: %w[friendly social playful],
     photo_url: 'https://www.k9web.com/wp-content/uploads/2021/01/english-bulldog-on-a-garden-smiling-780x519.jpg'
   },
@@ -205,7 +226,7 @@ dog_data = [
     breed: "german shepherd",
     age: 4,
     size: :big,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: ava,
     traits: %w[curious introvert intelligent],
     photo_url: 'https://dogtime.com/assets/uploads/gallery/german-shepherd-dog-breed-pictures/standing-7.jpg'
   },
@@ -216,7 +237,7 @@ dog_data = [
     breed: "german shepherd",
     age: 8,
     size: :big,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: ava,
     traits: %w[intelligent friendly loyal],
     photo_url: 'https://www.akc.org/wp-content/uploads/2016/06/German-Shepherd-Dog-laying-down-in-the-backyard.jpeg'
   },
@@ -227,7 +248,7 @@ dog_data = [
     breed: "greyhound",
     age: 3,
     size: :medium,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: james,
     traits: %w[zoomies energetic playful],
     photo_url: 'https://cdn.pixabay.com/photo/2020/07/05/14/43/greyhounds-5373255_1280.jpg'
   },
@@ -238,7 +259,7 @@ dog_data = [
     breed: :boxer,
     age: 1,
     size: :small,
-    user: [ofek, deborah, luke, daniel].sample,
+    user: james,
     traits: %w[pupper timid curious],
     photo_url: 'https://www.akc.org/wp-content/uploads/2021/01/Boxer-puppy-sitting-in-the-grass.null_.jpg'
   }
