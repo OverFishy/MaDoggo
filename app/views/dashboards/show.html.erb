@@ -1,11 +1,12 @@
 <div class="container">
-  <h1>DashBoard</h1>
-  <h2>Hello <%= @user.name %> !</h2>
+  <%# <h1>DashBoard</h1> %>
+  <h2 class="hello">Hello <%= @user.name %>!</h2>
+  <%= image_tag "manwdog", class: "profilepic" %>
   <div class="usercard">
   </div>
 
   <div class="container dogs">
-    <h4>Your doggos:</h4>
+    <h4>Doggos:</h4>
     <% @user_dogs.each do |dog| %>
       <%= render "parks/dog", dog: dog %>
     <% end %>
