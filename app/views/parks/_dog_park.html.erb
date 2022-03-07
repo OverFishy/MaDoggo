@@ -1,6 +1,5 @@
 <div class="card-dog">
-  <%#= image_tag "app/assets/images/dog-in-bowtie.jpg" %>
-  <%= image_tag "dog-in-bowtie.jpg" %>
+  <%= cl_image_tag dog.main_photo.key, crop: :fill %>
   <div class="card-dog-infos">
     <h2><strong><%= dog.name %></strong></h2>
     <div class="breed" style >
