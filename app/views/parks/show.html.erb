@@ -1,17 +1,26 @@
 
 <div class="container">
-  <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
+
+  <%# @park.dogs.each do |dog| %>
+    <%#= render "dog_park", dog: dog %>
+  <%# end %>
+  <div class="image_park">
+   <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
+  <%= image_tag "https://media.istockphoto.com/vectors/anotherdayatthebeach-vector-id1303603825?k=20&m=1303603825&s=612x612&w=0&h=CjwoVmsu931aQddzo7hTi3naVlqWFm3StNYP0eD6THg=" %>
+  <div class="button-container">
+  <button class="btn1 chat-button" style="margin-left: 10px;">
+    <%= link_to "park's chat", park_chat_path(@park)%>
+  </button>
+    <button class="btn1 chat-button">
+      <%= link_to "leave a review",  new_park_park_review_path(@park) %>
+    </button>
+   </div>
+  </div>
+
   <% @park.dogs.each do |dog| %>
     <%= render "dog_park", dog: dog %>
   <% end %>
-  
-  <h1 style="text-align: center; color: black; margin-top: 110px;"><strong><%= @park.name %></strong></h1>
-  <%= link_to "park's chat", park_chat_path(@park) %>
-  
-  <% @park.dogs.each do |dog| %>
-    <%= render "dog_park", dog: dog %>
-  <% end %>
-  
+
   <%= render "attend_button", park: @park, park_visit: @park_visit %>
   <button class="btn1" style="margin-left: 10px;"><%= link_to 'chat', root_path %></button>
   <button class="btn1" style="margin-left: 10px;"><%= link_to 'Back', root_path %></button>
@@ -31,4 +40,4 @@
 <% end %>
 
 
-  <%= link_to "leave a review",  new_park_park_review_path(@park), class: "btn btn-primary" %>
+  <%#= link_to "leave a review",  new_park_park_review_path(@park), class: "btn btn-primary" %>
