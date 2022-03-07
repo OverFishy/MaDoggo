@@ -86,12 +86,6 @@ ActiveRecord::Schema.define(version: 2022_03_07_084017) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "park_chatrooms", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "park_messages", force: :cascade do |t|
     t.bigint "park_id", null: false
     t.bigint "user_id", null: false
