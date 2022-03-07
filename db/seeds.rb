@@ -379,6 +379,16 @@ file10 = URI.open('https://d34c09ztlk5mrb.cloudfront.net/cunningham-recreation/d
 park10.photo.attach(io: file10, filename: 'park.png', content_type: 'image/png')
 puts 'att photo park 10'
 
+Park.create!(
+  name: 'Gan Habanim',
+  location: 'gan habanim Givatayim israel '
+)
+
+Park.create!(
+  name: 'Yaldei Teheran Garden',
+  location: 'Yaldei Teheran Garden Givatayim israel'
+)
+
 puts 'parks created'
 
 # ---- creating parks visits ----
