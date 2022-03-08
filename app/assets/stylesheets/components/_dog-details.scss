@@ -1,5 +1,53 @@
+$male-button-color: #a0a0f8;
+$male-secondary-color: #7d7de4;
+
+$female-button-color: pink;
+$female-secondary-color: #e2b3bb;
+
 .dog-details-container {
   border: solid black 4px;
   margin-top: 60px;
   padding-top: 20px;
+}
+
+.gender-button {
+  font-size: 100px;
+  border-radius: 20px;
+  border: 5px solid;
+  padding: 7px 23px;
+  border-bottom: 8px solid;
+}
+
+.male-button {
+  color: $male-button-color;
+  border-color: $male-button-color;
+  border-bottom-color: $male-secondary-color;
+}
+
+.female-button {
+  color: $female-button-color;
+  padding: 7px 32.375px;
+  margin-left: 40px;
+  border-color: $female-button-color;
+  border-bottom-color: $female-secondary-color;
+}
+
+.gender-active {
+  color: white;
+  border-bottom: 5px;
+  transform: translateY(6px);
+}
+
+.male-button.gender-active {
+  background: $male-button-color;
+  box-shadow: inset 4px 5px 10px $male-secondary-color;
+  border-top-color: $male-secondary-color;
+  border-left-color: $male-secondary-color;
+}
+
+.female-button.gender-active {
+  background: $female-button-color;
+  box-shadow: inset 4px 5px 10px $female-secondary-color;
+  border-top-color: $female-secondary-color;
+  border-left-color: $female-secondary-color;
 }

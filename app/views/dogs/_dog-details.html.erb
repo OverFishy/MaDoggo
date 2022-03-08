@@ -1,5 +1,5 @@
-<h4>some one told me you own a new dog!</h4>
-<h4>how exciting!</h4>
+<%= render 'page-title', title: "- -  -c============3" %>
+
 <div class='dog-details-container'>
   <div class='dog-nane'>
     <p>What do you call it?</p>
@@ -7,8 +7,8 @@
   <div class='dog-gender'>
     <p>What geneder is it?</p>
     <div class='gender-container'>
-      <i class='fas fa-mars' style='font-size:16x;color:blue' data-add-dog-target='gender' data-action="click->add-dog#genderElementClicked" data-gender="male"></i>
-      <i class='fas fa-venus' style='font-size:18px;color:pink' data-add-dog-target='gender' data-action="click->add-dog#genderElementClicked" data-gender="female"></i>
+      <i class='fas fa-mars gender-button male-button' data-add-dog-target='gender' data-action="click->add-dog#genderElementClicked" data-gender="male"></i>
+      <i class='fas fa-venus gender-button female-button' data-add-dog-target='gender' data-action="click->add-dog#genderElementClicked" data-gender="female"></i>
     </div>
   </div>
   <div class='dog-size'>
