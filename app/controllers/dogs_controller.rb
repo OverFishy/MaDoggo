@@ -7,6 +7,7 @@ class DogsController < ApplicationController
   def new
     @dog = Dog.new
     @traits = Trait.all
+    render layout: "application_barebones"
   end
 
   def create
