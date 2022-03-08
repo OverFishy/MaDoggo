@@ -11,6 +11,7 @@ export default class extends Controller {
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
       { received: data => {
         this.messagesTarget.insertAdjacentHTML('beforeend', data);
+        this.formTarget.reset();
         this.formTarget.scrollIntoView(false);
       }}
     )
