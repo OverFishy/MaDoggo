@@ -3,7 +3,8 @@
   justify-content: space-between;
   padding: 35px;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  position: fixed;
 }
 
 .navigation {
@@ -18,7 +19,7 @@
 }
 
 .x {
-  position: absolute;
+  position: fixed;
   left: 15px;
   top: 15px;
 }
@@ -30,12 +31,14 @@
 }
 
 .o {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  border: 1px;
-  background: black;
+  height: 3px;
+  width: 60px;
+  background:rgb(190, 190, 190);
   margin: 0 6px;
+}
+
+.active {
+  background: black;
 }
 
 .add-dog-container {
@@ -46,6 +49,7 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .page-container {
@@ -59,18 +63,23 @@
   min-width: 100vw;
 }
 
-.slide-page:nth-child(1) {
+.slide-page:nth-child(2) {
   background-color: aquamarine;
 }
 
-.slide-page:nth-child(2) {
+.slide-page:nth-child(3) {
   background-color: rgb(201, 97, 195);
 }
 
-.slide-page:nth-child(3) {
+.slide-page:nth-child(4) {
   background-color: red;
 }
 
-.slide-pages:nth-child(4) {
-  background-color: green;
+// .slide-page:nth-child(5) {
+//   background-color: green;
+// }
+
+.form {
+  visibility: hidden;
+  width: 0px;
 }

@@ -40,3 +40,6 @@ end
    #     @dogs = Dog.all
   #   end
 # end
+
+
+# add trait creation logic

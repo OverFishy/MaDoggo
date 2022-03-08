@@ -1,9 +1,8 @@
 <h1>traits</h1>
 <div class="traits-container">
   <% @traits.each do |trait| %>
-    <div class="trait-pick">
+    <div class="trait-pick" data-add-dog-id-value="<%= trait.id%>" data-add-dog-target='trait' data-action="click->add-dog#traitElementClicked">
       <%= trait.trait %>
     </div>
   <% end %>
 </div>
-<%= image_tag "dog-playing-freezbie.png" %>

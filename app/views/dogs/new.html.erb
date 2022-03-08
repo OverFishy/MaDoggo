@@ -2,7 +2,8 @@
   <div class="x">
     <%= image_tag "close.png" %>
   </div>
-  <div class="page-container">
+  <div class="page-container" data-controller='add-dog'>
+    <%= render 'form', dog: @dog , hidden: false%>
     <div class="slide-page">
       <%= render 'traits' %>
     </div>
@@ -12,18 +13,20 @@
     <div class="slide-page">
       <%#= render 'PLACEHOLDER' %>
     </div>
-    <div class="slide-page">
-      <%#= render 'PLACEHOLDER' %>
-    </div>
   </div>
   <div class="navigation-container">
     <%= image_tag "arrow.png", class: "left-arrow" %>
     <div class="navigation">
-      <div class="o"></div>
-      <div class="o"></div>
+      <div class="o active"></div>
       <div class="o"></div>
       <div class="o"></div>
     </div>
     <%= image_tag "right-arrow.png", class: "right-arrow" %>
   </div>
 </div>
+
+
+
+<%# adding controller targets ----DONE---- %>
+<%# adding stimulus action %>
+<%# applying trait logic in the dog#create %>

@@ -7,8 +7,15 @@
 }
 
 .trait-pick {
-  padding: 10px;
-  border-radius: 33px;
-  border: 2px solid;
-  margin: 7px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  margin: 8px;
+  font-size: 25px;
+  color: #fdfd5d;
+  border-color: #fdfd5d;
+}
+
+.trait-picked {
+  background: #fdfd5d;
+  color: white;
 }

@@ -1,12 +1,14 @@
 <div class="form">
-  <div id="form-container" class="container">
-    <%= simple_form_for(dog) do |f| %>
+  <div id="form-container">
+    <%= simple_form_for(dog,  data: { 'add-dog-target': 'form' }) do |f| %>
       <div id="info">
         <%= f.input :name %>
         <%= f.input :breed %>
         <%= f.input :gender %>
         <%= f.input :size %>
-        <%= f.input :traits %>
+        <%= f.input :traits , input_html: { data: { 'add-dog-target': 'traitInput' }} %>
+        <div data-add-dog-target="traitValues">
+        </div>
         <%= f.input :description, as: :text %>
         <%= f.input :main_photo, as: :file %>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
