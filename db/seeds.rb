@@ -381,7 +381,7 @@ puts 'att photo park 10'
 
 Park.create!(
   name: 'Gan Habanim',
-  location: 'Gan habanim Givatayim israel '
+  location: 'Gan Habanim Givatayim Israel '
 )
 
 Park.create!(
@@ -391,42 +391,42 @@ Park.create!(
 
 Park.create!(
   name: 'Groningen Park',
-  location: 'Groningen Park tel aviv israel'
+  location: 'Groningen Park tel aviv Israel'
 )
 
 Park.create!(
   name: 'The Zoological Garden',
-  location: 'The Zoological Garden tel aviv israel'
+  location: 'The Zoological Garden tel aviv Israel'
 )
 
 Park.create!(
   name: 'Forest Ramat Aviv',
-  location: 'Dog Park, Forest Ramat Aviv tel aviv israel'
+  location: 'Dog Park, Forest Ramat Aviv tel aviv Israel'
 )
 
 Park.create!(
   name: 'Weits Garden',
-  location: 'Weits Garden tel aviv israel'
+  location: 'Weits Garden tel aviv Israel'
 )
 
 Park.create!(
   name: 'Gan HaAtsmaut',
-  location: 'Gan HaAtsmaut Bnei Brak israel'
+  location: 'Gan HaAtsmaut Bnei Brak Israel'
 )
 
 Park.create!(
   name: 'Tsalina Garden',
-  location: 'Tsalina Garden Ramat Gan israel'
+  location: 'Tsalina Garden Ramat Gan Israel'
 )
 
 Park.create!(
   name: 'Safari Ramat Gan',
-  location: 'Safari Ramat Gan israel'
+  location: 'Safari Ramat Gan Israel'
 )
 
 Park.create!(
   name: 'Park HaHorshot',
-  location: 'Park HaHorshot tel aviv israel'
+  location: 'Park HaHorshot tel aviv Israel'
 )
 
 Park.create!(
