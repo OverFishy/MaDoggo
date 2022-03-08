@@ -1,8 +1,8 @@
 <% if park.visited_by(current_user)  %>
 
-  <button class="btn1" style="margin-left: 10px;"><%= link_to 'unattend', park_visit_path(park_visit), method: :delete %></button>
+  <%= link_to 'Check out', park_visit_path(park_visit), method: :delete, class: "btn2" %></button>
 <% else %>
   <%= simple_form_for [park, park_visit] do |f| %>
-    <%= f.button :submit, "Attend", class: "" %>
+    <%= f.button :submit, "Check in", class: "btn2" %>
   <% end %>
 <% end %>

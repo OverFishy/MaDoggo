@@ -12,10 +12,10 @@
     <% end %>
   </div>
 
-<%= link_to 'Add a dog', new_dog_path %>
+<%= link_to 'Add a dog', new_dog_path, :class => "btn1" %>
 
   <div class="container friends">
-    <h4>Your friends:</h4>
+    <h4>Friends:</h4>
     <div class="friends-grid">
       <% @user_friendships.each do |friendship| %>
         <%= render "friend", friendship: friendship %>
