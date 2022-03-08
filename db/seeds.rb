@@ -112,8 +112,8 @@ dog_data = [
   # dog 2
   {
     name: Faker::Creature::Dog.name,
-    gender: :pomeranian,
-    breed: Faker::Creature::Dog.breed,
+    gender: Faker::Creature::Dog.gender,
+    breed: :pomeranian,
     age: 2,
     size: :small,
     user: ofek,
