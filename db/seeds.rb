@@ -501,7 +501,7 @@ ParkVisit.create!(
 puts '3 park visit created'
 
 reviews = ['This is a wonderful park', 'It is the best park in the city',
-  'I love coming here with my 2 huskies', 'The best thing about this park is all the wonderful dogs', 'Probably the best park in the world' ]
+  'I love coming here with my 2 huskies', 'The best thing about this park are all the wonderful dogs', 'Probably the best park in the world' ]
 rating = [3, 4, 5]
 
 Park.all.each do |park|
