@@ -1,5 +1,14 @@
-<%= cl_image_tag park.photo.key, height: 121, crop: :fill %>
+<% if park.photo.attached? %>
+  <%= cl_image_tag park.photo.key, height: 121, crop: :fill %>
+<% else %>
+  <%= image_tag('dog-park.png', height: 121, crop: :fill) %>
+<% end  %>
 <h2 class="info-header"><%= park.name %></h2>
 <h3 class = "info-dog"><%= pluralize park.dogs.count, "dog" %> in this park</h3>
-  <div class="review card-review">
-<%= link_to 'show', park_path(park), class: "btn btn-primary", style: "margin: 18px;" %>
+<%= link_to 'show', park_path(park), class: "btn1", style: "margin: 18px;" %>
+    <p><span>
+    <br>
+    <% park.average_rating.to_i.times{  %>
+    ⭐
+    <% } %>
+    </span></p>
