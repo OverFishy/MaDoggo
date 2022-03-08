@@ -3,10 +3,11 @@
   <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
   <% if @park.photo.attached? %>
     <%= cl_image_tag @park.photo.key, height: 121, crop: :fill, class: "park-img" %>
+    <br>
+    <br>
   <% else %>
     <%= image_tag('dog-park.png', height: 121, crop: :fill, class: "park-img") %>
   <% end  %>
-  <%= link_to "leave a review",  new_park_park_review_path(@park), class: "btn btn-primary" %>
   <%= link_to "park's chat", park_chat_path(@park), class: "btn1" %>
   <%= render "attend_button", park: @park, park_visit: @park_visit %>
   <% @park.dogs.each do |dog| %>
