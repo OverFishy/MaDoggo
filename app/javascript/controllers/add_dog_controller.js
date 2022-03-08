@@ -7,7 +7,7 @@ export default class extends Controller {
   }
   static targets = [
     'trait', 'form', 'traitInput', 'traitValues',
-    'gender',
+    'gender', 'size'
   ]
 
   connect() {
@@ -31,47 +31,27 @@ export default class extends Controller {
   }
 
   genderElementClicked(evt) {
-    // console.log(evt, evt.target);
-    // expect to see 2 gender button elements
-    console.log(this.genderTargets);
     // add value to each gender icon ( data-value from stimulous )
     const genders = evt.target.getAttribute('data-gender');
-
     // remove both actives
     this.genderTargets[1].classList.remove('gender-active');
     this.genderTargets[0].classList.remove('gender-active');
+    // Add active class to chosen target
+    evt.target.classList.add('gender-active');
 
-    // Array.from(genders).forEach(el => {
-    //   console.log({el});
-    //   el.classList.remove('gender-active');
-    // })
-
-    evt.target.classList.toggle('gender-active');
-    // add active to clicked
-
-    // none active, press one
-    // turn on
-
-    // one active, press it
-    // turn off
-
-    // one active, press the the other
-    // remove from other
-    // add to you
-
-    // evt.target.classList.toggle('');
-    //
-
-    // console.log(gender)
-    // grab value from clicked icon
     // assign clicked value to gender input
     // this.genderInputTarget.value = gender;
   }
 
   sizeElementClicked(evt) {
     console.log(evt, evt.target);
-    const size = evt.target.getAttribute('data-size');
-    console.log(size)
+    const sizes = evt.target.getAttribute('data-size');
+    // remove 3 active
+    this.sizeTargets[2].classList.remove('size-active');
+    this.sizeTargets[1].classList.remove('size-active');
+    this.sizeTargets[0].classList.remove('size-active');
+    // Add active class to chosen target
+    evt.target.classList.add('size-active')
   }
 
 

@@ -1,22 +1,22 @@
-<%= render 'page-title', title: "- -  -c============3" %>
+<%= render 'page-title', title: "I Heard You Got A Doggo" %>
 
 <div class='dog-details-container'>
   <div class='dog-nane'>
-    <p>What do you call it?</p>
+    <p class="details-subtitle">What do you call it?</p>
   </div>
   <div class='dog-gender'>
-    <p>What geneder is it?</p>
+    <p class="details-subtitle">What geneder is it?</p>
     <div class='gender-container'>
       <i class='fas fa-mars gender-button male-button' data-add-dog-target='gender' data-action="click->add-dog#genderElementClicked" data-gender="male"></i>
       <i class='fas fa-venus gender-button female-button' data-add-dog-target='gender' data-action="click->add-dog#genderElementClicked" data-gender="female"></i>
     </div>
   </div>
   <div class='dog-size'>
-    <p>What size is it?</p>
+    <p class="details-subtitle">What size is it?</p>
     <div class="size-container">
-      <i class='fas fa-dog' style='font-size:14px;color:black' data-add-dog-target='size' data-action="click->add-dog#sizeElementClicked" data-size="small"></i>
-      <i class='fas fa-dog' style='font-size:17px;color:grey' data-add-dog-target='size' data-action="click->add-dog#sizeElementClicked" data-size="medium"></i>
-      <i class='fas fa-dog' style='font-size:20px;color:grey' data-add-dog-target='size' data-action="click->add-dog#sizeElementClicked" data-size="large"></i>
+      <i class='fas fa-dog size-button' style='font-size:0.95em' data-add-dog-target='size' data-action="click->add-dog#sizeElementClicked" data-size="small"></i>
+      <i class='fas fa-dog size-button' style='font-size:1.2em' data-add-dog-target='size' data-action="click->add-dog#sizeElementClicked" data-size="medium"></i>
+      <i class='fas fa-dog size-button' style='font-size:1.45em' data-add-dog-target='size' data-action="click->add-dog#sizeElementClicked" data-size="large"></i>
     </div>
   </div>
 </div>
