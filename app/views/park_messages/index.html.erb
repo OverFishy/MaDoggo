@@ -1,14 +1,15 @@
 <div
   data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%= @park.id %>">
+  data-chatroom-subscription-chatroom-id-value="<%= @park.id %>"
+  class="park-chat">
 
   <h1>#<%= @park.name %> chatroom</h1>
 
-<div class="messages" data-chatroom-subscription-target="messages">
-  <% @park_messages.each do |message| %>
-    <%= render "park_messages/message", message: message %>
-  <% end %>
-</div>
+  <div class="messages" data-chatroom-subscription-target="messages">
+    <% @park_messages.each do |message| %>
+      <%= render "park_messages/message", message: message %>
+    <% end %>
+  </div>
 
   <%= simple_form_for [@park, @park_message], data: { "chatroom-subscription-target": 'form' },
     remote: true,
@@ -21,4 +22,5 @@
     %>
     <%= f.submit "Send", class: "btn btn-primary" %>
   <% end %>
+   <%= link_to 'Back to park', park_path(@park), class: "btn1" %></button>
 </div>
