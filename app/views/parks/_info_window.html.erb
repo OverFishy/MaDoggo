@@ -4,8 +4,8 @@
   <%= image_tag('dog-park.png', height: 121, crop: :fill) %>
 <% end  %>
 <h2 class="info-header"><%= park.name %></h2>
-<h3 class = "info-dog"><%= pluralize park.dogs.count, "dog" %> in this park</h3>
-<%= link_to 'show', park_path(park), class: "btn1", style: "margin: 18px;" %>
+<h3 class = "pclass3"><strong><%= pluralize park.dogs.count, "dog" %></strong> in this park now</h3>
+<%= link_to 'View Park', park_path(park), class: "btn1", style: "margin: 18px;" %>
     <p><span>
     <br>
     <% park.average_rating.to_i.times{  %>
