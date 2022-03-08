@@ -1,7 +1,7 @@
 <div
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @park.id %>"
-  class="park-chat">
+  class="container park-chat">
 
   <h1>#<%= @park.name %> chatroom</h1>
 
@@ -13,14 +13,19 @@
 
   <%= simple_form_for [@park, @park_message], data: { "chatroom-subscription-target": 'form' },
     remote: true,
-    html: {class: "d-flex"} do |f|
+    html: {class: "row"} do |f|
   %>
-    <%= f.input :message,
-      label: false,
-      placeholder: "Message... ",
-      wrapper_html: {class: "flex-grow-1"}
-    %>
-    <%= f.submit "Send", class: "btn btn-primary" %>
+    <div class="input-group">
+      <%= f.input :message,
+        label: false,
+        as: :string,
+        placeholder: "Message... ",
+        wrapper_html: {class: "flex-grow-1"}
+      %>
+      <%= f.submit "Send", class: "btn btn-primary input-group-text mb-3" %>
+    </div>
+
+
   <% end %>
    <%= link_to 'Back to park', park_path(@park), class: "btn1" %></button>
 </div>
