@@ -113,8 +113,8 @@ dog_data = [
   # dog 2
   {
     name: Faker::Creature::Dog.name,
-    gender: :pomeranian,
-    breed: Faker::Creature::Dog.breed,
+    gender: Faker::Creature::Dog.gender,
+    breed: :pomeranian,
     age: 2,
     size: :small,
     user: ofek,
@@ -390,6 +390,75 @@ Park.create!(
   location: 'Yaldei Teheran Garden Givatayim israel'
 )
 
+Park.create!(
+  name: 'Groningen Park',
+  location: 'Groningen Park tel aviv israel'
+)
+
+Park.create!(
+  name: 'The Zoological Garden',
+  location: 'The Zoological Garden tel aviv israel'
+)
+
+Park.create!(
+  name: 'Forest Ramat Aviv',
+  location: 'Dog Park, Forest Ramat Aviv tel aviv israel'
+)
+
+Park.create!(
+  name: 'Weits Garden',
+  location: 'Weits Garden tel aviv israel'
+)
+
+Park.create!(
+  name: 'Gan HaAtsmaut',
+  location: 'Gan HaAtsmaut Bnei Brak israel'
+)
+
+Park.create!(
+  name: 'Tsalina Garden',
+  location: 'Tsalina Garden Ramat Gan israel'
+)
+
+Park.create!(
+  name: 'Safari Ramat Gan',
+  location: 'Safari Ramat Gan israel'
+)
+
+Park.create!(
+  name: 'Park HaHorshot',
+  location: 'Park HaHorshot tel aviv israel'
+)
+
+Park.create!(
+  name: 'Menachem Begin Park',
+  location: 'Menachem Begin Park tel aviv israel'
+)
+
+Park.create!(
+  name: "Ha'Horshot park",
+  location: "Ha'Horshot park tel aviv israel"
+)
+
+Park.create!(
+  name: "Charles Clore Park",
+  location: "Charles Clore Park tel aviv israel"
+)
+
+Park.create!(
+  name: "HaKovshim",
+  location: "HaKovshim tel aviv israel"
+)
+
+Park.create!(
+  name: "Darom Park",
+  location: "Darom Park tel aviv israel"
+)
+
+Park.create!(
+  name: "Yad LeBanim",
+  location: "Yad LeBanim bnei brak israel"
+)
 puts 'parks created'
 
 # ---- creating parks visits ----
@@ -411,6 +480,25 @@ ParkVisit.create!(
   user: deborah
 )
 
+ParkVisit.create!(
+  park: park7,
+  user: james
+)
+
+ParkVisit.create!(
+  park: park7,
+  user: ava
+)
+
+ParkVisit.create!(
+  park: park9,
+  user: emma
+)
+
+ParkVisit.create!(
+  park: park5,
+  user: olivia
+)
 puts '3 park visit created'
 
 reviews = ['This is a wonderful park', 'It is the best park in the city',

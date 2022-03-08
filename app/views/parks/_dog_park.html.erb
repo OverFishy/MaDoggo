@@ -3,9 +3,30 @@
   <div class="card-dog-infos">
     <h2><strong><%= dog.name %></strong></h2>
     <div class="breed" style >
-      <i class="fa fa-solid fa-dog"> </i>
+      <div class="gender">
+        <% if dog.gender == "Male" %>
+          <i class="fa fa-regular fa-mars"></i>
+        <% else %>
+          <i class="fa fa-thin fa-venus"></i>
+        <% end %>
+      </div>
       <h2><%= dog.breed %></h2>
     </div>
-    <h2><%= dog_size(dog) %></h2>
+    <div class="size">
+      <% if dog.size == 'small' %>
+       <i class='fas fa-dog' style='font-size:24px;color:black'></i>
+       <i class='fas fa-dog' style='font-size:36px;color:grey'></i>
+       <i class='fas fa-dog' style='font-size:48px;color:grey'></i>
+      <% elsif dog.size == 'medium' %>
+       <i  class='fas fa-dog' style='font-size:24px;color:grey'></i>
+        <i class='fas fa-dog' style='font-size:36px;color:black'></i>
+        <i class='fas fa-dog' style='font-size:48px;color:grey'></i>
+      <% elsif dog.size == 'big' %>
+        <i class='fas fa-dog' style='font-size:24px;color:grey'></i>
+        <i class='fas fa-dog' style='font-size:36px;color:grey'></i>
+        <i class='fas fa-dog' style='font-size:48px;color:black'></i>
+      <% end %>
+    </div>
+    <h2><%# dog_size(dog) %></h2>
   </div>
 </div>
