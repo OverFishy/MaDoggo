@@ -7,7 +7,8 @@ class ParksController < ApplicationController
       {
         lat: park.latitude,
         lng: park.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { park: park })
+        info_window: render_to_string(partial: "info_window", locals: { park: park }),
+        image_url: helpers.asset_url("paw-pin-marker")
       }
     end
     render layout: "application_simple"
