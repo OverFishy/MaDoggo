@@ -1,4 +1,26 @@
-<div class="container">
-  <%= render "form",  dog: @dog %>
+<div class="add-dog-container">
+  <div class="x">
+    <%= image_tag "close.png" %>
+  </div>
+  <div class="page-container" data-controller='add-dog'>
+    <%= render 'form', dog: @dog , hidden: false%>
+    <div class="slide-page">
+      <%= render 'dog-details.html' %>
+    </div>
+    <div class="slide-page">
+      <%= render 'upload-dog-photo' %>
+    </div>
+    <div class="slide-page">
+      <%= render 'traits' %>
+    </div>
+  </div>
+  <div class="navigation-container">
+    <%= image_tag "arrow.png", class: "left-arrow" %>
+    <div class="navigation">
+      <div class="o active"></div>
+      <div class="o"></div>
+      <div class="o"></div>
+    </div>
+    <%= image_tag "right-arrow.png", class: "right-arrow" %>
+  </div>
 </div>
-<%= link_to 'Back', root_path %>

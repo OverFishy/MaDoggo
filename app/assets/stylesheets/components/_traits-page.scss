@@ -1,0 +1,48 @@
+$trait-color: #a45fcf;
+
+.curved-title-container {
+  margin-top: 44px;
+}
+
+.curved-title-container path {
+  fill: none;
+}
+
+.curved-title-container text {
+  fill: purple;
+}
+
+.curved-title-container textPath {
+  font-size: 36px;
+  font-weight: bold;
+  color: purple;
+}
+
+.traits-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 10px 40px;
+  border-radius: 36px;
+}
+
+.trait-pick {
+  padding: 4px 10px;
+  border-radius: 15px;
+  margin: 8px 10px;
+  font-size: 17px;
+  color: $trait-color;
+  font-weight: bold;
+  border: 3px solid $trait-color;
+}
+
+.trait-picked {
+  background: $trait-color;
+  color: white;
+}
+
+.input {
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(129, 19, 129, 0.24);
+  border-color: #c59bee;
+}

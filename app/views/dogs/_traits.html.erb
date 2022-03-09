@@ -1,0 +1,11 @@
+<%= render 'page-title', title: "What's your Doggo like?" %>
+
+<div class="traits-container">
+  <% @traits.each do |trait| %>
+    <div class="trait-pick" data-add-dog-id-value="<%= trait.id%>" data-add-dog-target='trait' data-action="click->add-dog#traitElementClicked">
+      <%= trait.trait %>
+    </div>
+  <% end %>
+</div>
+
+<a href="#" class="btn btn-primary" data-action="click->add-dog#submitClicked">submit</a>

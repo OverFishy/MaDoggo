@@ -9,6 +9,7 @@ ParkVisit.delete_all
 ParkMessage.delete_all
 ParkReview.delete_all
 DogTrait.delete_all
+Trait.delete_all
 Park.delete_all
 Dog.delete_all
 User.delete_all
