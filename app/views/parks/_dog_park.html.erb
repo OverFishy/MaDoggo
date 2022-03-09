@@ -30,7 +30,9 @@
     </div>
     <div class="card-dog-traits">
       <% dog.traits.each do |trait| %>
-        <%= trait.trait %>
+        <div class='trait-pill'>
+         <p>#<%= trait.trait %></p>
+        </div>
       <% end %>
     </div>
   </div>
