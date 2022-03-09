@@ -2,18 +2,17 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   padding: 12px;
   margin: 16px;
+  box-shadow: 0 0px 4px black;
   border-radius: 20px;
+}
 
   .size {
     float: left
   }
-}
-
 
 .card-dog img {
   height: 100%;
@@ -23,8 +22,8 @@
 }
 
 .card-dog h2 {
-  font-size: 14px;
-  margin: 4px;
+  font-size: 11px;
+  margin: 2px;
   text-align: justify;
   padding: 1px;
 }
@@ -47,5 +46,7 @@
   display: flex;
 }
 .traits{
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: bold;
+
 }

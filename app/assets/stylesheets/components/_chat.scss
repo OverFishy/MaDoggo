@@ -4,7 +4,8 @@
   text-align: start;
   border-radius: 38px;
   margin: 20px;
-  color: black;
+  background: #25d366;
+  color: white;
 }
 
 .messages {
@@ -12,6 +13,7 @@
   box-shadow: 0 3px 10px black;
   border-radius: 20px;
   margin: 20px;
+  background: #ece5dd;
 }
 
 .input-group {
@@ -27,8 +29,11 @@
   position: relative;
   z-index: 2;
   box-shadow: 0 3px 10px black;
-  border-radius: 8px;
+  border-radius: 18px;
+  background: #128c7e;
+  border: #128c7e;
 }
+
 .form-control {
   display: block;
   width: 100%;
