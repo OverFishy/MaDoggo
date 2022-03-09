@@ -1,5 +1,11 @@
 const SLIDE_DELAY = 350;
 const initCarousel = () => {
+
+  const addDogContainer = document.querySelector('.add-dog-container')
+  if (!addDogContainer) {
+    return
+  }
+
   console.log('yeooo');
   const slidePages = document.getElementsByClassName('slide-page');
   const currentPageIndicators = document.getElementsByClassName('o');
