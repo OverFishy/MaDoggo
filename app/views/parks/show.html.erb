@@ -1,11 +1,9 @@
 
 <div class="container">
   <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
-    <%= link_to 'Back', root_path, class: "btn1" %></button>
-    <br>
-    <br>
   <% if @park.photo.attached? %>
     <%= cl_image_tag @park.photo.key, :width=>300, :height=>100, class: "park-img" %>
+    <br>
     <br>
   <% else %>
     <%= image_tag('dog-park.png', height: 121, crop: :fill, class: "park-img") %>
