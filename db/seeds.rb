@@ -157,8 +157,8 @@ dog_data = [
   },
   # dog 5
   {
-    name: Faker::Creature::Dog.name,
-    gender: Faker::Creature::Dog.gender,
+    name: "Buddy",
+    gender: "male",
     breed: :mixed,
     age: rand(17),
     size: :medium,
@@ -168,8 +168,8 @@ dog_data = [
   },
   # dog 6
   {
-    name: Faker::Creature::Dog.name,
-    gender: Faker::Creature::Dog.gender,
+    name: "Luna",
+    gender: "female",
     breed: :mixed,
     age: rand(13),
     size: :medium,
@@ -190,30 +190,30 @@ dog_data = [
   },
   # dog 8
   {
-    name: Faker::Creature::Dog.name,
-    gender: Faker::Creature::Dog.gender,
+    name: "Nala",
+    gender: "female",
     breed: "golden retriever",
     age: 1,
-    size: :medium,
+    size: :small,
     user: luke,
     traits: %w[pupper naughty playful],
     photo_url: 'https://images.unsplash.com/photo-1615233500064-caa995e2f9dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z29sZGVuJTIwcmV0cmlldmVyJTIwcHVwcHl8ZW58MHx8MHx8&w=1000&q=80'
   },
   # dog 9
   {
-    name: Faker::Creature::Dog.name,
-    gender: Faker::Creature::Dog.gender,
+    name: "Tucker",
+    gender: "male",
     breed: "golden retriever",
     age: 2,
-    size: :small,
+    size: :big,
     user: olivia,
-    traits: %w[pupper fluffy energetic],
+    traits: %w[naughty fluffy energetic],
     photo_url: 'https://www.zooplus.co.uk/magazine/wp-content/uploads/2019/03/Golden-retriever-dog-breed-1.jpg'
   },
   # dog 10
   {
-    name: Faker::Creature::Dog.name,
-    gender: Faker::Creature::Dog.gender,
+    name: "Roxy",
+    gender: "female",
     breed: :bulldog,
     age: 10,
     size: :medium,
