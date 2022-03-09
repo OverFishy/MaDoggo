@@ -5,7 +5,37 @@
    <%= image_tag('dog-in-bowtie.jpg', crop: :fill) %>
   <% end  %>
   <div class="card-dog-infos">
-    <h2><%= dog.name %></h2>
-    <p>the absolute <strong>best</strong> doggo out there.</p>
+<div class="gender"><h2><strong><%= dog.name %></strong>
+        <% if dog.gender == "Male" %>
+         <i class='fas fa-mars' style='font-size:14px;color:blue'></i>
+        <% else %>
+          <i class='fas fa-venus' style='font-size:16px;color:pink'></i>
+        <% end %>
+        </h2>
+      </div>
+
+    <div class="card-dog-breed" style >
+    </div>
+    <div class="card-dog-size"><h2><%= dog.breed %>
+      <% if dog.size == 'small' %>
+       <i class='fas fa-dog' style='font-size:8px;color:black'></i>
+       <i class='fas fa-dog' style='font-size:10px;color:grey'></i>
+       <i class='fas fa-dog' style='font-size:12px;color:grey'></i>
+      <% elsif dog.size == 'medium' %>
+       <i  class='fas fa-dog' style='font-size:8px;color:grey'></i>
+        <i class='fas fa-dog' style='font-size:10px;color:black'></i>
+        <i class='fas fa-dog' style='font-size:12px;color:grey'></i>
+      <% elsif dog.size == 'big' %>
+        <i class='fas fa-dog' style='font-size:8px;color:grey'></i>
+        <i class='fas fa-dog' style='font-size:10px;color:grey'></i>
+        <i class='fas fa-dog' style='font-size:12px;color:black'></i>
+      <% end %>
+      </h2>
+    </div>
+    <div class="card-dog-traits">
+      <% dog.traits.each do |trait| %>
+        <%= trait.trait %>
+      <% end %>
+    </div>
   </div>
 </div>
