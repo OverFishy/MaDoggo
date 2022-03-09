@@ -2,18 +2,17 @@
   <div id="form-container">
     <%= simple_form_for(dog,  data: { 'add-dog-target': 'form' }) do |f| %>
       <div id="info">
-        <%= f.input :name %>
-        <%= f.input :breed %>
-        <%= f.input :gender %>
-        <%= f.input :size %>
-        <%= f.input :traits , input_html: { data: { 'add-dog-target': 'traitInput' }} %>
-        <div data-add-dog-target="traitValues">
-        </div>
+        <%= f.input :name, input_html: { data: { 'add-dog-target': 'nameInput' }} %>
+        <%= f.input :breed, input_html: { data: { 'add-dog-target': 'breedInput' }} %>
+        <%= f.input :gender, input_html: { data: { 'add-dog-target': 'genderInput' }}%>
+        <%= f.input :size, input_html: { data: { 'add-dog-target': 'sizeInput' }}%>
+        <%= f.input :traits , value: "",input_html: { data: { 'add-dog-target': 'traitInput' }} %>
         <%= f.input :description, as: :text %>
-        <%= f.input :main_photo, as: :file %>
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.input :main_photo, as: :file, input_html: { data: { 'add-dog-target': 'photoInput' }} %>
+        <%= f.input :photos, as: :file %>
         <%= f.submit "Submit", class: "button" %>
       </div>
     <% end %>
   </div>
 </div>
+ <%# I think we should use the main_photo %>

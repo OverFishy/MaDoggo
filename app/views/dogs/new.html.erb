@@ -5,13 +5,13 @@
   <div class="page-container" data-controller='add-dog'>
     <%= render 'form', dog: @dog , hidden: false%>
     <div class="slide-page">
-      <%= render 'traits' %>
-    </div>
-    <div class="slide-page">
       <%= render 'dog-details.html' %>
     </div>
     <div class="slide-page">
-      <%#= render 'PLACEHOLDER' %>
+      <%= render 'upload-dog-photo' %>
+    </div>
+    <div class="slide-page">
+      <%= render 'traits' %>
     </div>
   </div>
   <div class="navigation-container">
@@ -24,9 +24,3 @@
     <%= image_tag "right-arrow.png", class: "right-arrow" %>
   </div>
 </div>
-
-
-
-<%# adding controller targets ----DONE---- %>
-<%# adding stimulus action %>
-<%# applying trait logic in the dog#create %>

@@ -13,7 +13,7 @@ $trait-color: #a45fcf;
 }
 
 .curved-title-container textPath {
-  font-size: 37px;
+  font-size: 36px;
   font-weight: bold;
   color: purple;
 }
@@ -30,7 +30,7 @@ $trait-color: #a45fcf;
   padding: 4px 10px;
   border-radius: 15px;
   margin: 8px 10px;
-  font-size: 25px;
+  font-size: 17px;
   color: $trait-color;
   font-weight: bold;
   border: 3px solid $trait-color;
@@ -39,4 +39,10 @@ $trait-color: #a45fcf;
 .trait-picked {
   background: $trait-color;
   color: white;
+}
+
+.input {
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(129, 19, 129, 0.24);
+  border-color: #c59bee;
 }
