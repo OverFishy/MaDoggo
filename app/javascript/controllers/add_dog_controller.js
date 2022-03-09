@@ -12,7 +12,6 @@ export default class extends Controller {
 
   connect() {
     console.log('Hello,', this.element);
-    this.femaleButton = document.getEleme
   }
 
   traitElementClicked(evt) {
