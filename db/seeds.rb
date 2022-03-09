@@ -167,14 +167,14 @@ dog_data = [
   },
   # dog 7
   {
-    name: Faker::Creature::Dog.name,
-    gender: Faker::Creature::Dog.gender,
-    breed: "golden retriever",
-    age: rand(6),
-    size: :medium,
+    name: 'Winston',
+    gender: 'male',
+    breed: "dalmatian",
+    age: 6,
+    size: :large,
     user: daniel,
-    traits: %w[friendly zoomies loyal],
-    photo_url: 'https://images.saymedia-content.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTc0MDk2MzYxNjM1OTgwODY2/what-you-should-know-about-owning-a-golden-retriever.jpg'
+    traits: %w[friendly playful intelligent],
+    photo_url: 'https://res.cloudinary.com/dwva6banj/image/upload/v1646856985/IMG_0058_rrh541.jpg'
   },
   # dog 8
   {
@@ -183,7 +183,7 @@ dog_data = [
     breed: "golden retriever",
     age: 1,
     size: :medium,
-    user: daniel,
+    user: luke,
     traits: %w[pupper naughty playful],
     photo_url: 'https://images.unsplash.com/photo-1615233500064-caa995e2f9dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z29sZGVuJTIwcmV0cmlldmVyJTIwcHVwcHl8ZW58MHx8MHx8&w=1000&q=80'
   },
@@ -194,7 +194,7 @@ dog_data = [
     breed: "golden retriever",
     age: 2,
     size: :small,
-    user: daniel,
+    user: olivia,
     traits: %w[pupper fluffy energetic],
     photo_url: 'https://www.zooplus.co.uk/magazine/wp-content/uploads/2019/03/Golden-retriever-dog-breed-1.jpg'
   },
