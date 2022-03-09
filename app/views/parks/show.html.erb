@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h1 class="page-header" ><strong><%= @park.name %></strong></h1>
+  <h1 class="page-header"><strong class="color-purple"><%= @park.name %></strong></h1>
   <% if @park.photo.attached? %>
     <%= cl_image_tag @park.photo.key, :width=>300, :height=>100, class: "park-img" %>
     <br>

@@ -76,6 +76,18 @@ Friendship.create!(
 )
 
 Friendship.create!(
+  user1: daniel,
+  user2: luke,
+  status: 's'
+)
+
+Friendship.create!(
+  user1: daniel,
+  user2: deborah,
+  status: 's'
+)
+
+Friendship.create!(
   user1: ofek,
   user2: deborah,
   status: 's'
@@ -168,7 +180,7 @@ dog_data = [
   # dog 7
   {
     name: 'Winston',
-    gender: 'male',
+    gender: 'Male',
     breed: "dalmatian",
     age: 6,
     size: :large,
@@ -297,7 +309,7 @@ end
 puts 'creating parks'
 
 hayarkon = Park.create!(
-  name: 'Ha-Yarkon dog park, Tel-Aviv',
+  name: 'Ha-Yarkon dog park',
   location: 'Hayarkon park Tel Aviv'
 )
 
@@ -307,7 +319,7 @@ hayarkon.photo.attach(io: file1, filename: 'park.png', content_type: 'image/png'
 puts 'att photo park 1'
 
 park2 = Park.create!(
-  name: 'kiryat sefer dog park, Tel-Aviv',
+  name: 'kiryat sefer dog park',
   location: 'kiryat sefer garden Tel Aviv'
 )
 file2 = URI.open('https://static.timesofisrael.com/www/uploads/2016/08/F150618MA013-640x400.jpg')
@@ -315,7 +327,7 @@ park2.photo.attach(io: file2, filename: 'park.png', content_type: 'image/png')
 puts 'att photo park 2'
 
 independence = Park.create!(
-  name: 'The independence dog park, Tel-Aviv',
+  name: 'The independence dog park',
   location: 'The Independence park Tel Aviv'
 )
 
@@ -324,7 +336,7 @@ independence.photo.attach(io: file3, filename: 'park.png', content_type: 'image/
 puts 'att photo park 3'
 
 park4 = Park.create!(
-  name: 'Frisheman dog park, Tel-Aviv',
+  name: 'Frisheman dog park',
   location: 'Frisheman Tel Aviv'
 )
 
@@ -333,7 +345,7 @@ park4.photo.attach(io: file4, filename: 'park.png', content_type: 'image/png')
 puts 'att photo park 4'
 
 park5 = Park.create!(
-  name: 'Arison Dog Park, Tel-Aviv',
+  name: 'Arison Dog Park',
   location: 'Arison tel aviv'
 )
 file5 = URI.open('https://media.istockphoto.com/photos/dogs-running-with-black-dog-off-ground-picture-id1143172074?k=20&m=1143172074&s=612x612&w=0&h=Eey7FCx0CavXyGlczHRX3MWHcSSEIh2hnfYf74S1XUA=')
@@ -341,7 +353,7 @@ park5.photo.attach(io: file5, filename: 'park.png', content_type: 'image/png')
 puts 'att photo park 5'
 
 park6 = Park.create!(
-  name: 'Gan meir Dog Park, Tel-Aviv',
+  name: 'Gan meir Dog Park',
   location: 'Gan meir Tel Aviv'
 )
 file6 = URI.open('https://media.istockphoto.com/photos/golden-retriever-having-a-drink-picture-id946655044?k=20&m=946655044&s=612x612&w=0&h=tXumZN9KGJZkc6ObHx0dfVOs_wP-T61axybQlH7UjL0=')
@@ -349,7 +361,7 @@ park6.photo.attach(io: file6, filename: 'park.png', content_type: 'image/png')
 puts 'att photo park 6'
 
 park7 = Park.create!(
-  name: 'Dvora baron Dog Park, Tel-Aviv',
+  name: 'Dvora baron Dog Park',
   location: 'Dvora baron garden Tel Aviv'
 )
 file7 = URI.open('https://media.istockphoto.com/photos/dogs-joyfully-play-and-run-in-dog-park-picture-id1326514093?k=20&m=1326514093&s=612x612&w=0&h=N0o_3Ui6zQdyNiFWqTSoCbvn-brbjx4x2zCUFHRcQ_s=')
@@ -357,7 +369,7 @@ park7.photo.attach(io: file7, filename: 'park.png', content_type: 'image/png')
 puts 'att photo park 7'
 
 park8 = Park.create!(
-  name: 'Sarona Dog park, Tel-Aviv',
+  name: 'Sarona Dog park',
   location: 'Sarona park Tel Aviv'
 )
 file8 = URI.open('https://media.istockphoto.com/photos/happy-dog-playing-at-the-park-picture-id1223104509?k=20&m=1223104509&s=612x612&w=0&h=WrNl1LIWbEpreTemWN4Tu8c1fivbtkpCjSnttFSgJGg=')
@@ -365,20 +377,20 @@ park8.photo.attach(io: file8, filename: 'park.png', content_type: 'image/png')
 puts 'att photo park 8'
 
 park9 = Park.create!(
-  name: 'Dubnov Dog Park, Tel-Aviv',
+  name: 'Dubnov Dog Park',
   location: 'Dubnov Tel Aviv'
 )
 file9 = URI.open('https://media.istockphoto.com/photos/dogs-playing-with-dog-runs-picture-id1293404176?k=20&m=1293404176&s=612x612&w=0&h=0AjeIzUc0cGSWmcwSXgGRbO7wqn72rSQRPrnld9fB3M=')
 park9.photo.attach(io: file9, filename: 'park.png', content_type: 'image/png')
 puts 'att photo park 9'
 
-park10 = Park.create!(
-  name: 'Zeev garden dog park, Tel-Aviv',
-  location: 'Zeev garden Tel Aviv'
-)
-file10 = URI.open('https://d34c09ztlk5mrb.cloudfront.net/cunningham-recreation/d2sacxxyngi6cb_cloudfront_net/Dog-Park-Image_183d17ce614a305ef7e14498bef98c4b.jpg')
-park10.photo.attach(io: file10, filename: 'park.png', content_type: 'image/png')
-puts 'att photo park 10'
+# park10 = Park.create!(
+#   name: 'Zeev garden dog park, Tel-Aviv',
+#   location: 'Zeev garden Tel Aviv'
+# )
+# file10 = URI.open('https://d34c09ztlk5mrb.cloudfront.net/cunningham-recreation/d2sacxxyngi6cb_cloudfront_net/Dog-Park-Image_183d17ce614a305ef7e14498bef98c4b.jpg')
+# park10.photo.attach(io: file10, filename: 'park.png', content_type: 'image/png')
+# puts 'att photo park 10'
 
 Park.create!(
   name: 'Gan Habanim',
