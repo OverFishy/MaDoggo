@@ -10,9 +10,9 @@
         </h2>
       </div>
 
-    <div class="breed" style >
+    <div class="card-dog-breed" style >
     </div>
-    <div class="size"><h2><%= dog.breed %>
+    <div class="card-dog-size"><h2><%= dog.breed %>
       <% if dog.size == 'small' %>
        <i class='fas fa-dog' style='font-size:8px;color:black'></i>
        <i class='fas fa-dog' style='font-size:10px;color:grey'></i>
@@ -28,7 +28,7 @@
       <% end %>
       </h2>
     </div>
-    <div class="traits">
+    <div class="card-dog-traits">
       <% dog.traits.each do |trait| %>
         <%= trait.trait %>
       <% end %>
