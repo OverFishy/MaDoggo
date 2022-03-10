@@ -12,14 +12,29 @@
     <% end %>
   </div>
 
-<%= link_to 'Add a dog', new_dog_path, :class => "btn1" %>
+  <%= link_to 'Add a dog', new_dog_path, :class => "btn1" %>
 
   <div class="container friends">
     <h4>Friends:</h4>
     <div class="friends-grid">
-      <% @user_friendships.each do |friendship| %>
-        <%= render "friend", friendship: friendship %>
-      <% end %>
+      <div class="card-friend">
+        <%= image_tag "luke-profile.jpeg" %>
+        <div class="card-friend-infos">
+          <p>Luke</p>
+        </div>
+      </div>
+      <div class="card-friend">
+        <%= image_tag "ofek-profile.jpeg" %>
+        <div class="card-friend-infos">
+          <p>Ofek</p>
+        </div>
+      </div>
+      <div class="card-friend">
+        <%= image_tag "deborah.jpeg" %>
+        <div class="card-friend-infos">
+          <p>Deborah</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
