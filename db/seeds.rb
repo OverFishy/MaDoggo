@@ -336,7 +336,7 @@ independence.photo.attach(io: file3, filename: 'park.png', content_type: 'image/
 puts 'att photo park 3'
 
 park4 = Park.create!(
-  name: 'Frisheman dog park',
+  name: 'Frishman dog park',
   location: 'Frisheman Tel Aviv'
 )
 
