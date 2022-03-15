@@ -1,3 +1,3 @@
 import initCarousel from "./carousel";
 
-initCarousel();
+document.addEventListener('turbolinks:load', initCarousel);

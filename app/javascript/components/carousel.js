@@ -1,18 +1,18 @@
 const SLIDE_DELAY = 350;
-const initCarousel = () => {
 
+const initCarousel = () => {
   const addDogContainer = document.querySelector('.add-dog-container')
   if (!addDogContainer) {
     return
   }
 
-  console.log('yeooo');
   const slidePages = document.getElementsByClassName('slide-page');
   const currentPageIndicators = document.getElementsByClassName('o');
-  console.log(currentPageIndicators);
   const rightArrowEl = document.querySelector('.right-arrow');
+
   let prevIndex;
   let currentIndex = 0;
+
   rightArrowEl.addEventListener('click', () => {
     if (currentIndex == slidePages.length - 1) return
     // remove previous index active class
